@@ -1,328 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Bowl Legacy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <title>SUPER BOWL LEGACY</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #05080f;
-            color: white;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* NAVIGATION */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050b16;
+      color: white;
+    }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(3, 7, 15, 0.92);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-        }
+    header {
+      width: 100%;
+      padding: 25px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
 
-        nav {
-            max-width: 1250px;
-            margin: auto;
-            height: 78px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 25px;
-        }
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #d4af37;
+    }
 
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #d4af37;
-        }
+    nav {
+      display: flex;
+      gap: 28px;
+    }
 
-        .menu {
-            display: flex;
-            gap: 27px;
-            list-style: none;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
 
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            transition: 0.3s;
-        }
+    nav a:hover {
+      color: #d4af37;
+    }
 
-        .menu a:hover {
-            color: #d4af37;
-        }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8%;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 50%, rgba(212,175,55,0.18), transparent 25%),
+        linear-gradient(135deg, #050b16 0%, #081426 55%, #02050a 100%);
+    }
 
-        /* HERO */
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -150px;
+      bottom: -200px;
+      background: rgba(212,175,55,0.08);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 130px 20px 80px;
-            background:
-                radial-gradient(circle at center, rgba(20, 45, 80, 0.7), transparent 55%),
-                linear-gradient(180deg, #07101f 0%, #03060b 100%);
-        }
+    .hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
 
-        .hero-content {
-            max-width: 900px;
-        }
+    .eyebrow {
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
 
-        .eyebrow {
-            color: #d4af37;
-            letter-spacing: 5px;
-            font-size: 13px;
-            margin-bottom: 22px;
-        }
+    h1 {
+      font-size: clamp(55px, 8vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
 
-        h1 {
-            font-size: clamp(55px, 9vw, 105px);
-            letter-spacing: 5px;
-            line-height: 0.95;
-            margin-bottom: 25px;
-            text-shadow: 0 5px 30px rgba(0,0,0,0.7);
-        }
+    h1 span {
+      color: #d4af37;
+    }
 
-        .hero p {
-            max-width: 650px;
-            margin: auto;
-            color: #c5cad4;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+    .hero p {
+      max-width: 560px;
+      color: #b8c0cc;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
 
-        .gold-line {
-            width: 90px;
-            height: 3px;
-            background: #d4af37;
-            margin: 30px auto;
-        }
+    .button {
+      display: inline-block;
+      padding: 16px 30px;
+      background: #d4af37;
+      color: #050b16;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 32px;
-            border: 1px solid #d4af37;
-            color: #d4af37;
-            text-decoration: none;
-            letter-spacing: 2px;
-            font-size: 13px;
-            transition: 0.3s;
-        }
+    .button:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
 
-        .button:hover {
-            background: #d4af37;
-            color: #05080f;
-        }
+    .trophy {
+      position: absolute;
+      right: 7%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 300px;
+      opacity: 0.9;
+      filter: drop-shadow(0 0 40px rgba(212,175,55,0.35));
+    }
 
-        /* SECTIONS */
+    .section {
+      padding: 100px 8%;
+      background: #07101d;
+    }
 
-        section {
-            padding: 100px 25px;
-            max-width: 1250px;
-            margin: auto;
-        }
+    .section-title {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 55px;
-        }
+    .section-title span {
+      color: #d4af37;
+    }
 
-        .section-title h2 {
-            font-size: 38px;
-            letter-spacing: 3px;
-        }
+    .section-intro {
+      color: #8994a3;
+      margin-bottom: 50px;
+      font-size: 17px;
+    }
 
-        .section-title p {
-            color: #9ca4b2;
-            margin-top: 12px;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    .card {
+      background: #0c1828;
+      border: 1px solid rgba(212,175,55,0.18);
+      padding: 35px;
+      min-height: 180px;
+      transition: 0.3s;
+    }
 
-        .card {
-            background: linear-gradient(145deg, #101827, #070b13);
-            border: 1px solid rgba(212,175,55,0.2);
-            padding: 40px 30px;
-            min-height: 230px;
-            transition: 0.3s;
-        }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+    }
 
-        .card:hover {
-            transform: translateY(-7px);
-            border-color: #d4af37;
-        }
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
 
-        .card-number {
-            color: #d4af37;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
+    .card p {
+      color: #8994a3;
+      line-height: 1.6;
+    }
 
-        .card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+    footer {
+      padding: 40px 8%;
+      text-align: center;
+      background: #030711;
+      color: #667080;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
 
-        .card p {
-            color: #9ca4b2;
-            line-height: 1.6;
-        }
+    @media (max-width: 900px) {
 
-        /* FOOTER */
+      nav {
+        display: none;
+      }
 
-        footer {
-            border-top: 1px solid rgba(212,175,55,0.2);
-            text-align: center;
-            padding: 40px 20px;
-            color: #737b89;
-            font-size: 13px;
-        }
+      .hero {
+        padding-top: 150px;
+      }
 
-        .footer-logo {
-            color: #d4af37;
-            letter-spacing: 3px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+      .trophy {
+        opacity: 0.12;
+        right: -40px;
+        font-size: 300px;
+      }
 
-        /* MOBILE */
+      .cards {
+        grid-template-columns: 1fr;
+      }
 
-        @media (max-width: 850px) {
-
-            .menu {
-                display: none;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                justify-content: center;
-            }
-
-            h1 {
-                font-size: 55px;
-            }
-        }
-    </style>
+      h1 {
+        font-size: 65px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <div class="logo">SUPER BOWL LEGACY</div>
+
     <nav>
-        <div class="logo">SUPER BOWL LEGACY</div>
-
-        <ul class="menu">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">SUPER BOWLS</a></li>
-            <li><a href="#">TEAMS</a></li>
-            <li><a href="#">PLAYERS</a></li>
-            <li><a href="#">RECORDS</a></li>
-            <li><a href="#">HISTORY</a></li>
-            <li><a href="#">MOMENTS</a></li>
-        </ul>
+      <a href="#">HOME</a>
+      <a href="#">SUPER BOWLS</a>
+      <a href="#">TEAMS</a>
+      <a href="#">PLAYERS</a>
+      <a href="#">RECORDS</a>
+      <a href="#">HISTORY</a>
+      <a href="#">MOMENTS</a>
     </nav>
-</header>
+  </header>
 
-<main>
+  <section class="hero">
 
-    <div class="hero">
+    <div class="hero-content">
 
-        <div class="hero-content">
+      <div class="eyebrow">
+        THE HISTORY OF THE SUPER BOWL
+      </div>
 
-            <div class="eyebrow">
-                THE HISTORY OF THE SUPER BOWL
-            </div>
+      <h1>
+        SUPER BOWL<br>
+        <span>LEGACY</span>
+      </h1>
 
-            <h1>
-                SUPER BOWL<br>
-                LEGACY
-            </h1>
+      <p>
+        Explore the history, legends, teams and unforgettable moments
+        that have shaped the greatest championship in American football.
+      </p>
 
-            <div class="gold-line"></div>
-
-            <p>
-                Explore the history, legends, records and unforgettable
-                moments that shaped the greatest championship in American football.
-            </p>
-
-            <a href="#" class="button">
-                EXPLORE THE LEGACY
-            </a>
-
-        </div>
+      <a href="#" class="button">
+        EXPLORE THE LEGACY
+      </a>
 
     </div>
 
-    <section>
+    <div class="trophy">
+      🏆
+    </div>
 
-        <div class="section-title">
-            <h2>EXPLORE THE LEGACY</h2>
-            <p>Decades of history. Legendary players. Unforgettable moments.</p>
-        </div>
+  </section>
 
-        <div class="cards">
+  <section class="section">
 
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>SUPER BOWLS</h3>
-                <p>
-                    Discover every Super Bowl from the first championship
-                    to the present day.
-                </p>
-            </div>
+    <h2 class="section-title">
+      Explore the <span>Legacy</span>
+    </h2>
 
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>LEGENDARY PLAYERS</h3>
-                <p>
-                    Meet the quarterbacks, coaches and stars who became
-                    part of Super Bowl history.
-                </p>
-            </div>
+    <p class="section-intro">
+      Discover the stories behind America's greatest sporting event.
+    </p>
 
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>GREATEST MOMENTS</h3>
-                <p>
-                    Relive the plays, comebacks and dramatic finishes
-                    that defined the Super Bowl.
-                </p>
-            </div>
+    <div class="cards">
 
-        </div>
+      <div class="card">
+        <h3>SUPER BOWLS</h3>
+        <p>
+          Explore every Super Bowl from the first championship to the present day.
+        </p>
+      </div>
 
-    </section>
+      <div class="card">
+        <h3>TEAMS</h3>
+        <p>
+          Discover the franchises, dynasties and rivalries that defined the NFL.
+        </p>
+      </div>
 
-</main>
+      <div class="card">
+        <h3>LEGENDS</h3>
+        <p>
+          Meet the players and coaches who became immortal in Super Bowl history.
+        </p>
+      </div>
 
-<footer>
-    <div class="footer-logo">SUPER BOWL LEGACY</div>
-    The ultimate history of the Super Bowl.
-</footer>
+    </div>
+
+  </section>
+
+  <footer>
+    SUPER BOWL LEGACY © 2026 — THE HISTORY OF THE GAME
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Super Bowl I | Super Bowl Legacy</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b18;
+    color: white;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(3,9,23,.82), rgba(3,9,23,.96)),
+        linear-gradient(135deg, #102b50, #020611);
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+}
+
+.small-title {
+    color: #d4af37;
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin: 15px 0 5px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    color: #c4ccda;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+.back {
+    display: inline-block;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.matchup {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.team {
+    background: linear-gradient(145deg, #0d1b36, #071022);
+    border: 1px solid #263958;
+    border-radius: 18px;
+    padding: 35px 20px;
+}
+
+.team h2 {
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.team span {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.vs {
+    font-size: 24px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.info {
+    margin-top: 40px;
+    background: #081225;
+    border: 1px solid #223451;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.info h2 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-box {
+    background: #0c1930;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.label {
+    color: #8794a9;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.value {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.story {
+    margin-top: 35px;
+    line-height: 1.7;
+    color: #c4ccda;
+}
+
+.story h2 {
+    color: #d4af37;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6f7b91;
+    border-top: 1px solid #1d2b45;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .matchup {
+        grid-template-columns: 1fr;
+    }
+
+    .vs {
+        margin: -5px 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="small-title">SUPER BOWL LEGACY</div>
+    <h1>SUPER BOWL I</h1>
+    <p>January 15, 1967 · Los Angeles, California</p>
+</section>
+
+<div class="container">
+
+<a class="back" href="superbowls.html">← BACK TO ALL SUPER BOWLS</a>
+
+<div class="matchup">
+
+    <div class="team">
+        <h2>Green Bay Packers</h2>
+        <span>CHAMPIONS</span>
+    </div>
+
+    <div class="vs">VS</div>
+
+    <div class="team">
+        <h2>Kansas City Chiefs</h2>
+        <span>RUNNERS-UP</span>
+    </div>
+
+</div>
+
+<div class="info">
+
+    <h2>Game Information</h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <div class="label">Final Score</div>
+            <div class="value">Packers 35 — Chiefs 10</div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">MVP</div>
+            <div class="value">Bart Starr</div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Stadium</div>
+            <div class="value">Los Angeles Memorial Coliseum</div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Attendance</div>
+            <div class="value">61,946</div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Date</div>
+            <div class="value">January 15, 1967</div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Head Coach</div>
+            <div class="value">Vince Lombardi</div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="story">
+
+    <h2>The Beginning of a Legacy</h2>
+
+    <p>
+        The first Super Bowl was played on January 15, 1967,
+        bringing together the champions of the NFL and the AFL
+        for the first time.
+    </p>
+
+    <p>
+        The Green Bay Packers, led by legendary head coach
+        Vince Lombardi, defeated the Kansas City Chiefs 35–10
+        in Los Angeles.
+    </p>
+
+    <p>
+        Bart Starr was named the game's first Super Bowl MVP,
+        while the Packers began what would become one of the
+        greatest legacies in NFL history.
+    </p>
+
+</div>
+
+</div>
+
+<footer>
+    SUPER BOWL LEGACY — The history of the greatest game
+</footer>
+
+</body>
+</html>

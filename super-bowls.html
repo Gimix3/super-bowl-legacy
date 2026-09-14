@@ -186,12 +186,12 @@ const superBowls = [
 
 superBowls.forEach((sb, index) => {
     document.write(`
-        <div class="card">
+        <a class="card" href="superbowl-${index + 1}.html">
             <div class="number">SUPER BOWL ${sb[0]}</div>
             <h2>${sb[1]}</h2>
             <p class="year">Champion: ${sb[2]}</p>
             <p>Opponent: ${sb[3]}</p>
-        </div>
+        </a>
     `);
 });
 </script>

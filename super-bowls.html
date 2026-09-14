@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowls | Super Bowl Legacy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050b16;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #050b16, #0b1b33);
+            border-bottom: 1px solid #c9a227;
+            padding: 25px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: radial-gradient(circle at center, #14294a 0%, #050b16 65%);
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #d4af37;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #bfc7d5;
+            font-size: 18px;
+        }
+
+        .content {
+            width: 88%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            font-size: 30px;
+            color: #d4af37;
+            margin-bottom: 25px;
+        }
+
+        .super-bowls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #101d32, #08111f);
+            border: 1px solid #263957;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #d4af37;
+        }
+
+        .number {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aeb8c8;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #263957;
+            color: #7f8da3;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SUPER BOWL LEGACY</div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="super-bowls.html">SUPER BOWLS</a>
+        <a href="#">TEAMS</a>
+        <a href="#">PLAYERS</a>
+        <a href="#">RECORDS</a>
+        <a href="#">HISTORY</a>
+        <a href="#">MOMENTS</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>SUPER BOWLS</h1>
+    <p>Explore the history of the greatest game in American football.</p>
+</section>
+
+<section class="content">
+
+    <h2 class="section-title">THE LEGACY BEGINS</h2>
+
+    <div class="super-bowls">
+
+        <div class="card">
+            <div class="number">SUPER BOWL I</div>
+            <h3>1967</h3>
+            <p>Green Bay Packers defeated the Kansas City Chiefs in the first ever Super Bowl.</p>
+        </div>
+
+        <div class="card">
+            <div class="number">SUPER BOWL II</div>
+            <h3>1968</h3>
+            <p>The Green Bay Packers captured their second consecutive championship.</p>
+        </div>
+
+        <div class="card">
+            <div class="number">SUPER BOWL III</div>
+            <h3>1969</h3>
+            <p>The New York Jets shocked the football world with a historic victory.</p>
+        </div>
+
+        <div class="card">
+            <div class="number">SUPER BOWL IV</div>
+            <h3>1970</h3>
+            <p>The Kansas City Chiefs claimed their first Super Bowl championship.</p>
+        </div>
+
+        <div class="card">
+            <div class="number">SUPER BOWL V</div>
+            <h3>1971</h3>
+            <p>The Baltimore Colts won a dramatic championship in Miami.</p>
+        </div>
+
+        <div class="card">
+            <div class="number">SUPER BOWL VI</div>
+            <h3>1972</h3>
+            <p>The Dallas Cowboys won their first Super Bowl in franchise history.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 SUPER BOWL LEGACY — The history. The legends. The legacy.
+</footer>
+
+</body>
+</html>
+```

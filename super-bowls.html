@@ -8,7 +8,6 @@
 <title>Super Bowls | Super Bowl Legacy</title>
 
 <style>
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,31 +16,34 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #050b16;
-    color: white;
+    background: linear-gradient(135deg, #050912, #0b1628);
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 header {
-    background: linear-gradient(135deg, #050b16, #0b1b33);
-    border-bottom: 1px solid #c9a227;
-    padding: 25px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 30px 7%;
+    border-bottom: 1px solid rgba(212,175,55,0.25);
+    background: rgba(3,8,18,0.9);
 }
 
 .logo {
     color: #d4af37;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+nav {
+    margin-top: 18px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 22px;
+    margin-right: 25px;
     font-size: 13px;
+    letter-spacing: 1px;
 }
 
 nav a:hover {
@@ -50,640 +52,42 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 85px 20px 65px;
-    background: radial-gradient(circle at center, #14294a 0%, #050b16 68%);
+    padding: 70px 20px 45px;
 }
 
 .hero h1 {
-    font-size: 58px;
-    color: #d4af37;
+    font-size: clamp(42px, 7vw, 78px);
     letter-spacing: 5px;
     margin-bottom: 15px;
 }
 
-.hero p {
-    color: #bfc7d5;
-    font-size: 18px;
-}
-
-.content {
-    width: 88%;
-    max-width: 1250px;
-    margin: 55px auto;
-}
-
-.section-title {
-    font-size: 30px;
+.hero h1 span {
     color: #d4af37;
-    margin-bottom: 30px;
 }
 
-.super-bowls {
+.hero p {
+    color: #b7c0cf;
+    font-size: 17px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.grid {
+    width: 86%;
+    max-width: 1250px;
+    margin: 20px auto 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 22px;
 }
 
 .card {
-    background: linear-gradient(145deg, #101d32, #08111f);
-    border: 1px solid #263957;
-    border-radius: 12px;
-    padding: 25px;
-    transition: 0.3s;
-    min-height: 175px;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-    border-color: #d4af37;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-
-.number {
-    color: #d4af37;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #aeb8c8;
-    line-height: 1.5;
-    font-size: 14px;
-}
-
-.winner {
-    margin-top: 14px;
-    color: #ffffff;
-    font-size: 13px;
-}
-
-.winner strong {
-    color: #d4af37;
-}
-
-footer {
-    margin-top: 80px;
-    padding: 30px;
-    text-align: center;
-    border-top: 1px solid #263957;
-    color: #7f8da3;
-    font-size: 13px;
-}
-
-@media (max-width: 700px) {
-
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px 7px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">SUPER BOWL LEGACY</div>
-
-<nav>
-<a href="index.html">HOME</a>
-<a href="super-bowls.html">SUPER BOWLS</a>
-<a href="#">TEAMS</a>
-<a href="#">PLAYERS</a>
-<a href="#">RECORDS</a>
-<a href="#">HISTORY</a>
-<a href="#">MOMENTS</a>
-</nav>
-
-</header>
-
-
-<section class="hero">
-
-<h1>SUPER BOWLS</h1>
-
-<p>Explore the history of the greatest game in American football.</p>
-
-</section>
-
-
-<section class="content">
-
-<h2 class="section-title">THE COMPLETE LEGACY</h2>
-
-<div class="super-bowls">
-
-
-<div class="card">
-<div class="number">SUPER BOWL I</div>
-<h3>1967</h3>
-<p>Green Bay Packers vs Kansas City Chiefs</p>
-<div class="winner"><strong>Champion:</strong> Green Bay Packers — 35–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL II</div>
-<h3>1968</h3>
-<p>Green Bay Packers vs Oakland Raiders</p>
-<div class="winner"><strong>Champion:</strong> Green Bay Packers — 33–14</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL III</div>
-<h3>1969</h3>
-<p>New York Jets vs Baltimore Colts</p>
-<div class="winner"><strong>Champion:</strong> New York Jets — 16–7</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL IV</div>
-<h3>1970</h3>
-<p>Kansas City Chiefs vs Minnesota Vikings</p>
-<div class="winner"><strong>Champion:</strong> Kansas City Chiefs — 23–7</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL V</div>
-<h3>1971</h3>
-<p>Baltimore Colts vs Dallas Cowboys</p>
-<div class="winner"><strong>Champion:</strong> Baltimore Colts — 16–13</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL VI</div>
-<h3>1972</h3>
-<p>Dallas Cowboys vs Miami Dolphins</p>
-<div class="winner"><strong>Champion:</strong> Dallas Cowboys — 24–3</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL VII</div>
-<h3>1973</h3>
-<p>Miami Dolphins vs Washington</p>
-<div class="winner"><strong>Champion:</strong> Miami Dolphins — 14–7</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL VIII</div>
-<h3>1974</h3>
-<p>Miami Dolphins vs Minnesota Vikings</p>
-<div class="winner"><strong>Champion:</strong> Miami Dolphins — 24–7</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL IX</div>
-<h3>1975</h3>
-<p>Pittsburgh Steelers vs Minnesota Vikings</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 16–6</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL X</div>
-<h3>1976</h3>
-<p>Pittsburgh Steelers vs Dallas Cowboys</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 21–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XI</div>
-<h3>1977</h3>
-<p>Oakland Raiders vs Minnesota Vikings</p>
-<div class="winner"><strong>Champion:</strong> Oakland Raiders — 32–14</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XII</div>
-<h3>1978</h3>
-<p>Dallas Cowboys vs Denver Broncos</p>
-<div class="winner"><strong>Champion:</strong> Dallas Cowboys — 27–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XIII</div>
-<h3>1979</h3>
-<p>Pittsburgh Steelers vs Dallas Cowboys</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 35–31</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XIV</div>
-<h3>1980</h3>
-<p>Pittsburgh Steelers vs Los Angeles Rams</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 31–19</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XV</div>
-<h3>1981</h3>
-<p>Oakland Raiders vs Philadelphia Eagles</p>
-<div class="winner"><strong>Champion:</strong> Oakland Raiders — 27–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XVI</div>
-<h3>1982</h3>
-<p>San Francisco 49ers vs Cincinnati Bengals</p>
-<div class="winner"><strong>Champion:</strong> San Francisco 49ers — 26–21</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XVII</div>
-<h3>1983</h3>
-<p>Washington vs Miami Dolphins</p>
-<div class="winner"><strong>Champion:</strong> Washington — 27–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XVIII</div>
-<h3>1984</h3>
-<p>Los Angeles Raiders vs Washington</p>
-<div class="winner"><strong>Champion:</strong> Los Angeles Raiders — 38–9</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XIX</div>
-<h3>1985</h3>
-<p>San Francisco 49ers vs Miami Dolphins</p>
-<div class="winner"><strong>Champion:</strong> San Francisco 49ers — 38–16</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XX</div>
-<h3>1986</h3>
-<p>Chicago Bears vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> Chicago Bears — 46–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXI</div>
-<h3>1987</h3>
-<p>New York Giants vs Denver Broncos</p>
-<div class="winner"><strong>Champion:</strong> New York Giants — 39–20</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXII</div>
-<h3>1988</h3>
-<p>Washington vs Denver Broncos</p>
-<div class="winner"><strong>Champion:</strong> Washington — 42–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXIII</div>
-<h3>1989</h3>
-<p>San Francisco 49ers vs Cincinnati Bengals</p>
-<div class="winner"><strong>Champion:</strong> San Francisco 49ers — 20–16</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXIV</div>
-<h3>1990</h3>
-<p>San Francisco 49ers vs Denver Broncos</p>
-<div class="winner"><strong>Champion:</strong> San Francisco 49ers — 55–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXV</div>
-<h3>1991</h3>
-<p>New York Giants vs Buffalo Bills</p>
-<div class="winner"><strong>Champion:</strong> New York Giants — 20–19</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXVI</div>
-<h3>1992</h3>
-<p>Washington vs Buffalo Bills</p>
-<div class="winner"><strong>Champion:</strong> Washington — 37–24</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXVII</div>
-<h3>1993</h3>
-<p>Dallas Cowboys vs Buffalo Bills</p>
-<div class="winner"><strong>Champion:</strong> Dallas Cowboys — 52–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXVIII</div>
-<h3>1994</h3>
-<p>Dallas Cowboys vs Buffalo Bills</p>
-<div class="winner"><strong>Champion:</strong> Dallas Cowboys — 30–13</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXIX</div>
-<h3>1995</h3>
-<p>San Francisco 49ers vs San Diego Chargers</p>
-<div class="winner"><strong>Champion:</strong> San Francisco 49ers — 49–26</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXX</div>
-<h3>1996</h3>
-<p>Dallas Cowboys vs Pittsburgh Steelers</p>
-<div class="winner"><strong>Champion:</strong> Dallas Cowboys — 27–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXI</div>
-<h3>1997</h3>
-<p>Green Bay Packers vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> Green Bay Packers — 35–21</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXII</div>
-<h3>1998</h3>
-<p>Denver Broncos vs Green Bay Packers</p>
-<div class="winner"><strong>Champion:</strong> Denver Broncos — 31–24</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXIII</div>
-<h3>1999</h3>
-<p>Denver Broncos vs Atlanta Falcons</p>
-<div class="winner"><strong>Champion:</strong> Denver Broncos — 34–19</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXIV</div>
-<h3>2000</h3>
-<p>St. Louis Rams vs Tennessee Titans</p>
-<div class="winner"><strong>Champion:</strong> St. Louis Rams — 23–16</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXV</div>
-<h3>2001</h3>
-<p>Baltimore Ravens vs New York Giants</p>
-<div class="winner"><strong>Champion:</strong> Baltimore Ravens — 34–7</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXVI</div>
-<h3>2002</h3>
-<p>New England Patriots vs St. Louis Rams</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 20–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXVII</div>
-<h3>2003</h3>
-<p>Tampa Bay Buccaneers vs Oakland Raiders</p>
-<div class="winner"><strong>Champion:</strong> Tampa Bay Buccaneers — 48–21</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXVIII</div>
-<h3>2004</h3>
-<p>New England Patriots vs Carolina Panthers</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 32–29</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XXXIX</div>
-<h3>2005</h3>
-<p>New England Patriots vs Philadelphia Eagles</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 24–21</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XL</div>
-<h3>2006</h3>
-<p>Pittsburgh Steelers vs Seattle Seahawks</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 21–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLI</div>
-<h3>2007</h3>
-<p>Indianapolis Colts vs Chicago Bears</p>
-<div class="winner"><strong>Champion:</strong> Indianapolis Colts — 29–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLII</div>
-<h3>2008</h3>
-<p>New York Giants vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> New York Giants — 17–14</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLIII</div>
-<h3>2009</h3>
-<p>Pittsburgh Steelers vs Arizona Cardinals</p>
-<div class="winner"><strong>Champion:</strong> Pittsburgh Steelers — 27–23</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLIV</div>
-<h3>2010</h3>
-<p>New Orleans Saints vs Indianapolis Colts</p>
-<div class="winner"><strong>Champion:</strong> New Orleans Saints — 31–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLV</div>
-<h3>2011</h3>
-<p>Green Bay Packers vs Pittsburgh Steelers</p>
-<div class="winner"><strong>Champion:</strong> Green Bay Packers — 31–25</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLVI</div>
-<h3>2012</h3>
-<p>New York Giants vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> New York Giants — 21–17</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLVII</div>
-<h3>2013</h3>
-<p>Baltimore Ravens vs San Francisco 49ers</p>
-<div class="winner"><strong>Champion:</strong> Baltimore Ravens — 34–31</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLVIII</div>
-<h3>2014</h3>
-<p>Seattle Seahawks vs Denver Broncos</p>
-<div class="winner"><strong>Champion:</strong> Seattle Seahawks — 43–8</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL XLIX</div>
-<h3>2015</h3>
-<p>New England Patriots vs Seattle Seahawks</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 28–24</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL 50</div>
-<h3>2016</h3>
-<p>Denver Broncos vs Carolina Panthers</p>
-<div class="winner"><strong>Champion:</strong> Denver Broncos — 24–10</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LI</div>
-<h3>2017</h3>
-<p>New England Patriots vs Atlanta Falcons</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 34–28</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LII</div>
-<h3>2018</h3>
-<p>Philadelphia Eagles vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> Philadelphia Eagles — 41–33</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LIII</div>
-<h3>2019</h3>
-<p>New England Patriots vs Los Angeles Rams</p>
-<div class="winner"><strong>Champion:</strong> New England Patriots — 13–3</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LIV</div>
-<h3>2020</h3>
-<p>Kansas City Chiefs vs San Francisco 49ers</p>
-<div class="winner"><strong>Champion:</strong> Kansas City Chiefs — 31–20</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LV</div>
-<h3>2021</h3>
-<p>Tampa Bay Buccaneers vs Kansas City Chiefs</p>
-<div class="winner"><strong>Champion:</strong> Tampa Bay Buccaneers — 31–9</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LVI</div>
-<h3>2022</h3>
-<p>Los Angeles Rams vs Cincinnati Bengals</p>
-<div class="winner"><strong>Champion:</strong> Los Angeles Rams — 23–20</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LVII</div>
-<h3>2023</h3>
-<p>Kansas City Chiefs vs Philadelphia Eagles</p>
-<div class="winner"><strong>Champion:</strong> Kansas City Chiefs — 38–35</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LVIII</div>
-<h3>2024</h3>
-<p>Kansas City Chiefs vs San Francisco 49ers</p>
-<div class="winner"><strong>Champion:</strong> Kansas City Chiefs — 25–22</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LIX</div>
-<h3>2025</h3>
-<p>Philadelphia Eagles vs Kansas City Chiefs</p>
-<div class="winner"><strong>Champion:</strong> Philadelphia Eagles — 40–22</div>
-</div>
-
-
-<div class="card">
-<div class="number">SUPER BOWL LX</div>
-<h3>2026</h3>
-<p>Seattle Seahawks vs New England Patriots</p>
-<div class="winner"><strong>Champion:</strong> Seattle Seahawks — 29–13</div>
-</div>
-
-
-</div>
-</section>
-
-
-<footer>
-© 2026 SUPER BOWL LEGACY — The history. The legends. The legacy.
-</footer>
-
-</body>
-</html>
+    position: relative;
+    padding: 28px;
+    min-height: 170px;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(18,31,52,0.95), rgba(7,15,28,0.95));
+    transition: 0.3s ease;
 ```

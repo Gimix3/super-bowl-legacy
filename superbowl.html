@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SUPER BOWL LEGACY</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #050b18, #0b1630);
+    color: white;
+}
+
+header {
+    padding: 25px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.back {
+    margin-bottom: 30px;
+}
+
+.back a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.badge {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 15px 0 5px;
+}
+
+.year {
+    color: #aaa;
+    font-size: 22px;
+    margin-bottom: 45px;
+}
+
+.matchup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team {
+    width: 280px;
+}
+
+.team small {
+    display: block;
+    color: #d4af37;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.team strong {
+    font-size: 25px;
+}
+
+.vs {
+    font-size: 24px;
+    color: #888;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(212,175,55,0.4);
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.navigation a:hover {
+    background: #d4af37;
+    color: #050b18;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SUPER BOWL LEGACY</div>
+</header>
+
+<div class="container">
+
+    <div class="back">
+        <a href="super-bowls.html">← BACK TO ALL SUPER BOWLS</a>
+    </div>
+
+    <div class="hero">
+
+        <div class="badge">
+            SUPER BOWL <span id="roman"></span>
+        </div>
+
+        <h1 id="title"></h1>
+
+        <div class="year" id="year"></div>
+
+        <div class="matchup">
+
+            <div class="team">
+                <small>CHAMPION</small>
+                <strong id="champion"></strong>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="team">
+                <small>OPPONENT</small>
+                <strong id="opponent"></strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <a id="previous" href="#">← PREVIOUS</a>
+        <a id="next" href="#">NEXT →</a>
+    </div>
+
+</div>
+
+<footer>
+    SUPER BOWL LEGACY — The history of the greatest game
+</footer>
+
+<script>
+
+const superBowls = [
+
+["I","1967","Green Bay Packers","Kansas City Chiefs"],
+["II","1968","Green Bay Packers","Oakland Raiders"],
+["III","1969","New York Jets","Baltimore Colts"],
+["IV","1970","Kansas City Chiefs","Minnesota Vikings"],
+["V","1971","Baltimore Colts","Dallas Cowboys"],
+["VI","1972","Dallas Cowboys","Miami Dolphins"],
+["VII","1973","Miami Dolphins","Washington"],
+["VIII","1974","Miami Dolphins","Minnesota Vikings"],
+["IX","1975","Pittsburgh Steelers","Minnesota Vikings"],
+["X","1976","Pittsburgh Steelers","Dallas Cowboys"],
+["XI","1977","Oakland Raiders","Minnesota Vikings"],
+["XII","1978","Dallas Cowboys","Denver Broncos"],
+["XIII","1979","Pittsburgh Steelers","Dallas Cowboys"],
+["XIV","1980","Pittsburgh Steelers","Los Angeles Rams"],
+["XV","1981","Oakland Raiders","Philadelphia Eagles"],
+["XVI","1982","San Francisco 49ers","Cincinnati Bengals"],
+["XVII","1983","Washington","Miami Dolphins"],
+["XVIII","1984","Los Angeles Raiders","Washington"],
+["XIX","1985","San Francisco 49ers","Miami Dolphins"],
+["XX","1986","Chicago Bears","New England Patriots"],
+["XXI","1987","New York Giants","Denver Broncos"],
+["XXII","1988","Washington","Denver Broncos"],
+["XXIII","1989","San Francisco 49ers","Cincinnati Bengals"],
+["XXIV","1990","San Francisco 49ers","Denver Broncos"],
+["XXV","1991","New York Giants","Buffalo Bills"],
+["XXVI","1992","Washington","Buffalo Bills"],
+["XXVII","1993","Dallas Cowboys","Buffalo Bills"],
+["XXVIII","1994","Dallas Cowboys","Buffalo Bills"],
+["XXIX","1995","San Francisco 49ers","San Diego Chargers"],
+["XXX","1996","Dallas Cowboys","Pittsburgh Steelers"],
+["XXXI","1997","Green Bay Packers","New England Patriots"],
+["XXXII","1998","Denver Broncos","Green Bay Packers"],
+["XXXIII","1999","Denver Broncos","Atlanta Falcons"],
+["XXXIV","2000","St. Louis Rams","Tennessee Titans"],
+["XXXV","2001","Baltimore Ravens","New York Giants"],
+["XXXVI","2002","New England Patriots","St. Louis Rams"],
+["XXXVII","2003","Tampa Bay Buccaneers","Oakland Raiders"],
+["XXXVIII","2004","New England Patriots","Carolina Panthers"],
+["XXXIX","2005","New England Patriots","Philadelphia Eagles"],
+["XL","2006","Pittsburgh Steelers","Seattle Seahawks"],
+["XLI","2007","Indianapolis Colts","Chicago Bears"],
+["XLII","2008","New York Giants","New England Patriots"],
+["XLIII","2009","Pittsburgh Steelers","Arizona Cardinals"],
+["XLIV","2010","New Orleans Saints","Indianapolis Colts"],
+["XLV","2011","Green Bay Packers","Pittsburgh Steelers"],
+["XLVI","2012","New York Giants","New England Patriots"],
+["XLVII","2013","Baltimore Ravens","San Francisco 49ers"],
+["XLVIII","2014","Seattle Seahawks","Denver Broncos"],
+["XLIX","2015","New England Patriots","Seattle Seahawks"],
+["L","2016","Denver Broncos","Carolina Panthers"],
+["LI","2017","New England Patriots","Atlanta Falcons"],
+["LII","2018","Philadelphia Eagles","New England Patriots"],
+["LIII","2019","New England Patriots","Los Angeles Rams"],
+["LIV","2020","Kansas City Chiefs","San Francisco 49ers"],
+["LV","2021","Tampa Bay Buccaneers","Kansas City Chiefs"],
+["LVI","2022","Los Angeles Rams","Cincinnati Bengals"],
+["LVII","2023","Kansas City Chiefs","Philadelphia Eagles"],
+["LVIII","2024","Kansas City Chiefs","San Francisco 49ers"],
+["LIX","2025","Philadelphia Eagles","Kansas City Chiefs"],
+["LX","2026","Seattle Seahawks","New England Patriots"]
+
+];
+
+const params = new URLSearchParams(window.location.search);
+
+let id = parseInt(params.get("id"));
+
+if (!id || id < 1 || id > superBowls.length) {
+    id = 1;
+}
+
+const sb = superBowls[id - 1];
+
+document.getElementById("roman").textContent = sb[0];
+document.getElementById("title").textContent = "SUPER BOWL " + sb[0];
+document.getElementById("year").textContent = sb[1];
+document.getElementById("champion").textContent = sb[2];
+document.getElementById("opponent").textContent = sb[3];
+
+document.title = "Super Bowl " + sb[0] + " | SUPER BOWL LEGACY";
+
+if (id > 1) {
+    document.getElementById("previous").href =
+        "superbowl.html?id=" + (id - 1);
+} else {
+    document.getElementById("previous").style.visibility = "hidden";
+}
+
+if (id < superBowls.length) {
+    document.getElementById("next").href =
+        "superbowl.html?id=" + (id + 1);
+} else {
+    document.getElementById("next").style.visibility = "hidden";
+}
+
+</script>
+
+</body>
+</html>

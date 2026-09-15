@@ -130,14 +130,18 @@
     }
 
     .trophy {
-      position: absolute;
-      right: 7%;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 300px;
-      opacity: 0.9;
-      filter: drop-shadow(0 0 40px rgba(212,175,55,0.35));
-    }
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.95;
+  filter: drop-shadow(0 0 45px rgba(212,175,55,0.45));
+}
+
+.trophy-cup {
+  font-size: 300px;
+  filter: grayscale(1) sepia(1) saturate(5) hue-rotate(355deg);
+}
 
     .section {
       padding: 100px 8%;
@@ -269,8 +273,8 @@
     </div>
 
     <div class="trophy">
-      🏆
-    </div>
+  <div class="trophy-cup">🏆</div>
+</div>
 
   </section>
 

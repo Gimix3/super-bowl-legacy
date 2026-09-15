@@ -150,19 +150,21 @@ footer {
 
         <div class="matchup">
 
-            <div class="team">
-                <small>CHAMPION</small>
-                <strong id="champion"></strong>
-            </div>
+    <div class="team">
+        <small>CHAMPION</small>
+        <strong id="champion"></strong>
+    </div>
 
-            <div class="vs">VS</div>
+    <div class="score">
+        <span id="score"></span>
+    </div>
 
-            <div class="team">
-                <small>OPPONENT</small>
-                <strong id="opponent"></strong>
-            </div>
+    <div class="team">
+        <small>OPPONENT</small>
+        <strong id="opponent"></strong>
+    </div>
 
-        </div>
+</div>
 
     </div>
 
@@ -259,6 +261,7 @@ document.getElementById("title").textContent = "SUPER BOWL " + sb[0];
 document.getElementById("year").textContent = sb[1];
 document.getElementById("champion").textContent = sb[2];
 document.getElementById("opponent").textContent = sb[3];
+document.getElementById("score").textContent = sb[4];
 
 document.title = "Super Bowl " + sb[0] + " | SUPER BOWL LEGACY";
 

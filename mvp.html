@@ -159,9 +159,26 @@
   text-transform: uppercase;
 }
     .team {
-  color: #b8c0cc;
-  font-size: 16px;
-  margin-bottom: 8px;
+ .team-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.team-row .team {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.team-logo {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  filter: none !important;
 }
 
     .award {

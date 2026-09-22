@@ -19,38 +19,38 @@
       color: white;
     }
 
-   header {
-    padding: 25px 50px;
-    background: #071225;
-    border-bottom: 1px solid #c9a227;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    header {
+      padding: 25px 50px;
+      background: #071225;
+      border-bottom: 1px solid #c9a227;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #d4af37;
-}
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #d4af37;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
 
-nav a:hover {
-    color: #d4af37;
-}
+    nav a:hover {
+      color: #d4af37;
+    }
 
     .hero {
-  text-align: center;
-  padding: 90px 20px 70px;
-  background: #050b16;
+      text-align: center;
+      padding: 90px 20px 70px;
+      background: #050b16;
     }
 
     .eyebrow {
@@ -99,74 +99,84 @@ nav a:hover {
       margin-bottom: 40px;
     }
 
-    .mvp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: -25px; }
+    .mvp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: -25px;
+    }
 
-   .mvp-card {
-  background: linear-gradient(145deg, #0d192a, #08111f);
-  border: 2px solid #d4af37;
-  padding: 25px;
-  min-height: 430px;
-  transition: 0.3s;
-  text-align: center;
-  overflow: hidden;
-}
+    .mvp-card {
+      background: linear-gradient(145deg, #0d192a, #08111f);
+      border: 2px solid #d4af37;
+      padding: 25px;
+      min-height: 430px;
+      transition: 0.3s;
+      text-align: center;
+      overflow: hidden;
+    }
 
-   .mvp-card:hover {
-  border-color: #d4af37;
-}
+    .mvp-card:hover {
+      border-color: #d4af37;
+    }
 
-  .year {
-  color: #d4af37;
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 5px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
+    .year {
+      color: #d4af37;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
 
-.mvp-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  margin-bottom: 22px;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
-}
-    
-  .mvp-card h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-    
- .team {
-  color: #b8c0cc;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
+    .mvp-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin-bottom: 22px;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+    }
 
-  .team-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
+    .mvp-card h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-.team-row .team {
-  margin: 0;
-  color: #4A7C59;
-  font-size: 22px;
-}
+    .position {
+      margin-bottom: 8px;
+    }
 
-.team-row img.team-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin: 0;
-  filter: none;
-}
+    .team {
+      color: #b8c0cc;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .team-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .team-row .team {
+      margin: 0;
+      color: #4A7C59;
+      font-size: 22px;
+    }
+
+    .team-row img.team-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin: 0;
+      filter: none;
+    }
+
     .award {
       display: inline-block;
       padding: 8px 14px;
@@ -209,7 +219,7 @@ nav a:hover {
       <a href="superbowls.html">SUPER BOWLS</a>
       <a href="teams.html">TEAMS</a>
       <a href="mvp.html" class="active">MVP</a>
-     </nav>
+    </nav>
 
   </header>
 
@@ -219,25 +229,27 @@ nav a:hover {
 
     <h1>SUPER BOWL <span>MVPs</span></h1>
 
-    
   </section>
 
   <section class="section">
 
-      <div class="mvp-grid">
+    <div class="mvp-grid">
+
+      <!-- SUPER BOWL I -->
+
       <div class="mvp-card">
-      <div class="year">SUPER BOWL I</div>
-      <img src="mvp-images/Bart-Starr.jpg" alt="Bart Starr">
-      <h2>Bart Starr</h2>
-      <p class="position">QUARTERBACK · QB</p>
+        <div class="year">SUPER BOWL I</div>
+        <img src="mvp-images/Bart-Starr.jpg" alt="Bart Starr">
+        <h2>Bart Starr</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/packers.png" alt="Green Bay Packers">
+          <p class="team" style="color: #FFB612;">Green Bay Packers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
 
-<div class="team-row">
-  <img class="team-logo" src="Logos/packers.png" alt="Green Bay Packers">
-  <p class="team">Green Bay Packers</p>
-</div>
-
-<span class="award">MVP</span>
-</div>
+      <!-- SUPER BOWL II -->
 
       <div class="mvp-card">
         <div class="year">SUPER BOWL II</div>
@@ -246,58 +258,823 @@ nav a:hover {
         <p class="position">QUARTERBACK · QB</p>
         <div class="team-row">
           <img class="team-logo" src="Logos/packers.png" alt="Green Bay Packers">
-          <p class="team">Green Bay Packers</p>
+          <p class="team" style="color: #FFB612;">Green Bay Packers</p>
         </div>
         <span class="award">MVP</span>
       </div>
 
-       <div class="mvp-card">
+      <!-- SUPER BOWL III -->
+
+      <div class="mvp-card">
         <div class="year">SUPER BOWL III</div>
         <img src="mvp-images/Joe-Namath.jpg" alt="Joe Namath">
         <h2>Joe Namath</h2>
         <p class="position">QUARTERBACK · QB</p>
         <div class="team-row">
           <img class="team-logo" src="Logos/jets.png" alt="New York Jets">
-          <p class="team">New York Jets</p>
+          <p class="team" style="color: #125740;">New York Jets</p>
         </div>
         <span class="award">MVP</span>
       </div>
 
-     <div class="mvp-card">
-  <div class="year">SUPER BOWL IV</div>
-  <img src="mvp-images/Len-Dawson.jpg" alt="Len Dawson">
-  <h2>Len Dawson</h2>
-  <p class="position">QUARTERBACK · QB</p>
-  <div class="team-row">
-    <img class="team-logo" src="Logos/chiefs.png" alt="Kansas City Chiefs">
-    <p class="team" style="color: #E31837;">Kansas City Chiefs</p>
-  </div>
-  <span class="award">MVP</span>
-</div>
+      <!-- SUPER BOWL IV -->
 
       <div class="mvp-card">
-  <div class="year">SUPER BOWL V</div>
-  <img src="mvp-images/Chuck-Howley.jpg" alt="Chuck Howley">
-  <h2>Chuck Howley</h2>
-  <p class="position">LINEBACKER · LB</p>
-  <div class="team-row">
-    <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
-    <p class="team" style="color: #869397;">Dallas Cowboys</p>
-  </div>
-  <span class="award">MVP</span>
-</div>
+        <div class="year">SUPER BOWL IV</div>
+        <img src="mvp-images/Len-Dawson.jpg" alt="Len Dawson">
+        <h2>Len Dawson</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/chiefs.png" alt="Kansas City Chiefs">
+          <p class="team" style="color: #E31837;">Kansas City Chiefs</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
 
-    <div class="mvp-card">
-  <div class="year">SUPER BOWL VI</div>
-  <img src="mvp-images/Roger-Staubach.jpg" alt="Roger Staubach">
-  <h2>Roger Staubach</h2>
-  <p class="position">QUARTERBACK · QB</p>
-  <div class="team-row">
-    <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
-    <p class="team" style="color: #869397;">Dallas Cowboys</p>
-  </div>
-  <span class="award">MVP</span>
-</div>
+      <!-- SUPER BOWL V -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL V</div>
+        <img src="mvp-images/Chuck-Howley.jpg" alt="Chuck Howley">
+        <h2>Chuck Howley</h2>
+        <p class="position">LINEBACKER · LB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL VI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL VI</div>
+        <img src="mvp-images/Roger-Staubach.jpg" alt="Roger Staubach">
+        <h2>Roger Staubach</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL VII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL VII</div>
+        <img src="mvp-images/Jake-Scott.jpg" alt="Jake Scott">
+        <h2>Jake Scott</h2>
+        <p class="position">SAFETY · S</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/dolphins.png" alt="Miami Dolphins">
+          <p class="team" style="color: #008E97;">Miami Dolphins</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL VIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL VIII</div>
+        <img src="mvp-images/Larry-Csonka.jpg" alt="Larry Csonka">
+        <h2>Larry Csonka</h2>
+        <p class="position">FULLBACK · FB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/dolphins.png" alt="Miami Dolphins">
+          <p class="team" style="color: #008E97;">Miami Dolphins</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL IX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL IX</div>
+        <img src="mvp-images/Franco-Harris.jpg" alt="Franco Harris">
+        <h2>Franco Harris</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL X -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL X</div>
+        <img src="mvp-images/Lynn-Swann.jpg" alt="Lynn Swann">
+        <h2>Lynn Swann</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XI</div>
+        <img src="mvp-images/Fred-Biletnikoff.jpg" alt="Fred Biletnikoff">
+        <h2>Fred Biletnikoff</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/raiders.png" alt="Oakland Raiders">
+          <p class="team" style="color: #A5ACAF;">Oakland Raiders</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XII</div>
+        <img src="mvp-images/Harvey-Martin.jpg" alt="Harvey Martin">
+        <h2>Harvey Martin</h2>
+        <p class="position">DEFENSIVE END · DE</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XIII</div>
+        <img src="mvp-images/Terry-Bradshaw.jpg" alt="Terry Bradshaw">
+        <h2>Terry Bradshaw</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XIV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XIV</div>
+        <img src="mvp-images/Terry-Bradshaw.jpg" alt="Terry Bradshaw">
+        <h2>Terry Bradshaw</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XV</div>
+        <img src="mvp-images/Jim-Plunkett.jpg" alt="Jim Plunkett">
+        <h2>Jim Plunkett</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/raiders.png" alt="Oakland Raiders">
+          <p class="team" style="color: #A5ACAF;">Oakland Raiders</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XVI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XVI</div>
+        <img src="mvp-images/Joe-Montana.jpg" alt="Joe Montana">
+        <h2>Joe Montana</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/49ers.png" alt="San Francisco 49ers">
+          <p class="team" style="color: #AA0000;">San Francisco 49ers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XVII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XVII</div>
+        <img src="mvp-images/John-Riggins.jpg" alt="John Riggins">
+        <h2>John Riggins</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/washington.png" alt="Washington Redskins">
+          <p class="team" style="color: #773141;">Washington Redskins</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XVIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XVIII</div>
+        <img src="mvp-images/Marcus-Allen.jpg" alt="Marcus Allen">
+        <h2>Marcus Allen</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/raiders.png" alt="Los Angeles Raiders">
+          <p class="team" style="color: #A5ACAF;">Los Angeles Raiders</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XIX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XIX</div>
+        <img src="mvp-images/Joe-Montana.jpg" alt="Joe Montana">
+        <h2>Joe Montana</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/49ers.png" alt="San Francisco 49ers">
+          <p class="team" style="color: #AA0000;">San Francisco 49ers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XX</div>
+        <img src="mvp-images/Richard-Dent.jpg" alt="Richard Dent">
+        <h2>Richard Dent</h2>
+        <p class="position">DEFENSIVE END · DE</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/bears.png" alt="Chicago Bears">
+          <p class="team" style="color: #C83803;">Chicago Bears</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXI</div>
+        <img src="mvp-images/Phil-Simms.jpg" alt="Phil Simms">
+        <h2>Phil Simms</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/giants.png" alt="New York Giants">
+          <p class="team" style="color: #0B2265;">New York Giants</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXII</div>
+        <img src="mvp-images/Doug-Williams.jpg" alt="Doug Williams">
+        <h2>Doug Williams</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/washington.png" alt="Washington Redskins">
+          <p class="team" style="color: #773141;">Washington Redskins</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXIII</div>
+        <img src="mvp-images/Jerry-Rice.jpg" alt="Jerry Rice">
+        <h2>Jerry Rice</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/49ers.png" alt="San Francisco 49ers">
+          <p class="team" style="color: #AA0000;">San Francisco 49ers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXIV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXIV</div>
+        <img src="mvp-images/Joe-Montana.jpg" alt="Joe Montana">
+        <h2>Joe Montana</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/49ers.png" alt="San Francisco 49ers">
+          <p class="team" style="color: #AA0000;">San Francisco 49ers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXV</div>
+        <img src="mvp-images/Ottis-Anderson.jpg" alt="Ottis Anderson">
+        <h2>Ottis Anderson</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/giants.png" alt="New York Giants">
+          <p class="team" style="color: #0B2265;">New York Giants</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXVI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXVI</div>
+        <img src="mvp-images/Mark-Rypien.jpg" alt="Mark Rypien">
+        <h2>Mark Rypien</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/washington.png" alt="Washington Redskins">
+          <p class="team" style="color: #773141;">Washington Redskins</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXVII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXVII</div>
+        <img src="mvp-images/Troy-Aikman.jpg" alt="Troy Aikman">
+        <h2>Troy Aikman</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXVIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXVIII</div>
+        <img src="mvp-images/Emmitt-Smith.jpg" alt="Emmitt Smith">
+        <h2>Emmitt Smith</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXIX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXIX</div>
+        <img src="mvp-images/Steve-Young.jpg" alt="Steve Young">
+        <h2>Steve Young</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/49ers.png" alt="San Francisco 49ers">
+          <p class="team" style="color: #AA0000;">San Francisco 49ers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXX</div>
+        <img src="mvp-images/Larry-Brown.jpg" alt="Larry Brown">
+        <h2>Larry Brown</h2>
+        <p class="position">CORNERBACK · CB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/cowboys.png" alt="Dallas Cowboys">
+          <p class="team" style="color: #869397;">Dallas Cowboys</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXI</div>
+        <img src="mvp-images/Desmond-Howard.jpg" alt="Desmond Howard">
+        <h2>Desmond Howard</h2>
+        <p class="position">RETURN SPECIALIST · KR/PR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/packers.png" alt="Green Bay Packers">
+          <p class="team" style="color: #FFB612;">Green Bay Packers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXII</div>
+        <img src="mvp-images/Terrell-Davis.jpg" alt="Terrell Davis">
+        <h2>Terrell Davis</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/broncos.png" alt="Denver Broncos">
+          <p class="team" style="color: #FB4F14;">Denver Broncos</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXIII</div>
+        <img src="mvp-images/John-Elway.jpg" alt="John Elway">
+        <h2>John Elway</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/broncos.png" alt="Denver Broncos">
+          <p class="team" style="color: #FB4F14;">Denver Broncos</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXIV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXIV</div>
+        <img src="mvp-images/Kurt-Warner.jpg" alt="Kurt Warner">
+        <h2>Kurt Warner</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/rams.png" alt="St. Louis Rams">
+          <p class="team" style="color: #003594;">St. Louis Rams</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXV</div>
+        <img src="mvp-images/Ray-Lewis.jpg" alt="Ray Lewis">
+        <h2>Ray Lewis</h2>
+        <p class="position">LINEBACKER · LB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/ravens.png" alt="Baltimore Ravens">
+          <p class="team" style="color: #241773;">Baltimore Ravens</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXVI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXVI</div>
+        <img src="mvp-images/Tom-Brady.jpg" alt="Tom Brady">
+        <h2>Tom Brady</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXVII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXVII</div>
+        <img src="mvp-images/Dexter-Jackson.jpg" alt="Dexter Jackson">
+        <h2>Dexter Jackson</h2>
+        <p class="position">SAFETY · S</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/buccaneers.png" alt="Tampa Bay Buccaneers">
+          <p class="team" style="color: #D50A0A;">Tampa Bay Buccaneers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXVIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXVIII</div>
+        <img src="mvp-images/Tom-Brady.jpg" alt="Tom Brady">
+        <h2>Tom Brady</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XXXIX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XXXIX</div>
+        <img src="mvp-images/Deion-Branch.jpg" alt="Deion Branch">
+        <h2>Deion Branch</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XL -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XL</div>
+        <img src="mvp-images/Hines-Ward.jpg" alt="Hines Ward">
+        <h2>Hines Ward</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLI</div>
+        <img src="mvp-images/Peyton-Manning.jpg" alt="Peyton Manning">
+        <h2>Peyton Manning</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/colts.png" alt="Indianapolis Colts">
+          <p class="team" style="color: #002C5F;">Indianapolis Colts</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLII</div>
+        <img src="mvp-images/Eli-Manning.jpg" alt="Eli Manning">
+        <h2>Eli Manning</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/giants.png" alt="New York Giants">
+          <p class="team" style="color: #0B2265;">New York Giants</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLIII</div>
+        <img src="mvp-images/Santonio-Holmes.jpg" alt="Santonio Holmes">
+        <h2>Santonio Holmes</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/steelers.png" alt="Pittsburgh Steelers">
+          <p class="team" style="color: #FFB612;">Pittsburgh Steelers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLIV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLIV</div>
+        <img src="mvp-images/Drew-Brees.jpg" alt="Drew Brees">
+        <h2>Drew Brees</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/saints.png" alt="New Orleans Saints">
+          <p class="team" style="color: #D3BC8D;">New Orleans Saints</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLV</div>
+        <img src="mvp-images/Aaron-Rodgers.jpg" alt="Aaron Rodgers">
+        <h2>Aaron Rodgers</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/packers.png" alt="Green Bay Packers">
+          <p class="team" style="color: #FFB612;">Green Bay Packers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLVI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLVI</div>
+        <img src="mvp-images/Eli-Manning.jpg" alt="Eli Manning">
+        <h2>Eli Manning</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/giants.png" alt="New York Giants">
+          <p class="team" style="color: #0B2265;">New York Giants</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLVII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLVII</div>
+        <img src="mvp-images/Joe-Flacco.jpg" alt="Joe Flacco">
+        <h2>Joe Flacco</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/ravens.png" alt="Baltimore Ravens">
+          <p class="team" style="color: #241773;">Baltimore Ravens</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLVIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLVIII</div>
+        <img src="mvp-images/Malcolm-Smith.jpg" alt="Malcolm Smith">
+        <h2>Malcolm Smith</h2>
+        <p class="position">LINEBACKER · LB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/seahawks.png" alt="Seattle Seahawks">
+          <p class="team" style="color: #69BE28;">Seattle Seahawks</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL XLIX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL XLIX</div>
+        <img src="mvp-images/Tom-Brady.jpg" alt="Tom Brady">
+        <h2>Tom Brady</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL L -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL L</div>
+        <img src="mvp-images/Von-Miller.jpg" alt="Von Miller">
+        <h2>Von Miller</h2>
+        <p class="position">LINEBACKER · LB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/broncos.png" alt="Denver Broncos">
+          <p class="team" style="color: #FB4F14;">Denver Broncos</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LI</div>
+        <img src="mvp-images/Tom-Brady.jpg" alt="Tom Brady">
+        <h2>Tom Brady</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LII</div>
+        <img src="mvp-images/Nick-Foles.jpg" alt="Nick Foles">
+        <h2>Nick Foles</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/eagles.png" alt="Philadelphia Eagles">
+          <p class="team" style="color: #004C54;">Philadelphia Eagles</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LIII</div>
+        <img src="mvp-images/Julian-Edelman.jpg" alt="Julian Edelman">
+        <h2>Julian Edelman</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/patriots.png" alt="New England Patriots">
+          <p class="team" style="color: #C60C30;">New England Patriots</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LIV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LIV</div>
+        <img src="mvp-images/Patrick-Mahomes.jpg" alt="Patrick Mahomes">
+        <h2>Patrick Mahomes</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/chiefs.png" alt="Kansas City Chiefs">
+          <p class="team" style="color: #E31837;">Kansas City Chiefs</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LV -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LV</div>
+        <img src="mvp-images/Tom-Brady.jpg" alt="Tom Brady">
+        <h2>Tom Brady</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/buccaneers.png" alt="Tampa Bay Buccaneers">
+          <p class="team" style="color: #D50A0A;">Tampa Bay Buccaneers</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LVI -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LVI</div>
+        <img src="mvp-images/Cooper-Kupp.jpg" alt="Cooper Kupp">
+        <h2>Cooper Kupp</h2>
+        <p class="position">WIDE RECEIVER · WR</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/rams.png" alt="Los Angeles Rams">
+          <p class="team" style="color: #003594;">Los Angeles Rams</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LVII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LVII</div>
+        <img src="mvp-images/Patrick-Mahomes.jpg" alt="Patrick Mahomes">
+        <h2>Patrick Mahomes</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/chiefs.png" alt="Kansas City Chiefs">
+          <p class="team" style="color: #E31837;">Kansas City Chiefs</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LVIII -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LVIII</div>
+        <img src="mvp-images/Patrick-Mahomes.jpg" alt="Patrick Mahomes">
+        <h2>Patrick Mahomes</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/chiefs.png" alt="Kansas City Chiefs">
+          <p class="team" style="color: #E31837;">Kansas City Chiefs</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LIX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LIX</div>
+        <img src="mvp-images/Jalen-Hurts.jpg" alt="Jalen Hurts">
+        <h2>Jalen Hurts</h2>
+        <p class="position">QUARTERBACK · QB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/eagles.png" alt="Philadelphia Eagles">
+          <p class="team" style="color: #004C54;">Philadelphia Eagles</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
+      <!-- SUPER BOWL LX -->
+
+      <div class="mvp-card">
+        <div class="year">SUPER BOWL LX</div>
+        <img src="mvp-images/Kenneth-Walker-III.jpg" alt="Kenneth Walker III">
+        <h2>Kenneth Walker III</h2>
+        <p class="position">RUNNING BACK · RB</p>
+        <div class="team-row">
+          <img class="team-logo" src="Logos/seahawks.png" alt="Seattle Seahawks">
+          <p class="team" style="color: #69BE28;">Seattle Seahawks</p>
+        </div>
+        <span class="award">MVP</span>
+      </div>
+
     </div>
 
   </section>

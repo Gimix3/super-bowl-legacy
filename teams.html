@@ -1,114 +1,123 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams | Super Bowl Legacy</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #050914;
-            color: white;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #050914;
+        color: white;
+    }
 
-        header {
-            padding: 25px 50px;
-            background: #071225;
-            border-bottom: 1px solid #c9a227;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    header {
+        padding: 25px 50px;
+        background: #071225;
+        border-bottom: 1px solid #c9a227;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #d4af37;
-        }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: #d4af37;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
 
-        nav a:hover {
-            color: #d4af37;
-        }
+    nav a:hover {
+        color: #d4af37;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 70px 20px 45px;
-        }
+    .hero {
+        text-align: center;
+        padding: 70px 20px 45px;
+    }
 
-        .hero h1 {
-            font-size: 52px;
-            margin: 0 0 15px;
-            letter-spacing: 5px;
-        }
+    .hero h1 {
+        font-size: 52px;
+        margin: 0 0 15px;
+        letter-spacing: 5px;
+    }
 
-        .hero p {
-            color: #aeb7c8;
-            font-size: 18px;
-        }
+    .hero p {
+        color: #aeb7c8;
+        font-size: 18px;
+    }
 
-        .teams {
-            max-width: 1200px;
-            margin: auto;
-            padding: 30px 25px 70px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-        }
+    .teams {
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px 25px 70px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 22px;
+    }
 
-        .team-card {
-            background: linear-gradient(145deg, #0c1830, #08101f);
-            border: 1px solid #263553;
-            border-radius: 14px;
-            padding: 28px 20px;
-            text-align: center;
-            transition: 0.3s;
-        }
+    .team-card {
+        background: linear-gradient(145deg, #0c1830, #08101f);
+        border: 1px solid #263553;
+        border-radius: 14px;
+        padding: 28px 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
 
-        .team-card:hover {
-            transform: translateY(-6px);
-            border-color: #d4af37;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
-        }
+    .team-card:hover {
+        transform: translateY(-6px);
+        border-color: #d4af37;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    }
 
-        .team-card h2 {
-            margin: 0 0 10px;
-            color: #d4af37;
-            font-size: 22px;
-        }
+    .team-card h2 {
+        margin: 0 0 18px;
+        color: #d4af37;
+        font-size: 22px;
+    }
 
-        .team-card p {
-            margin: 6px 0;
-            color: #c7cfdd;
-        }
+    .team-card p {
+        margin: 8px 0;
+        color: #c7cfdd;
+    }
 
-        .wins {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #ffffff;
-        }
+    .wins {
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: bold;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #77839a;
-            border-top: 1px solid #18243b;
-        }
-    </style>
+    .appearances {
+        font-size: 14px;
+        color: #aeb7c8;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #77839a;
+        border-top: 1px solid #18243b;
+    }
+</style>
+```
+
 </head>
 
 <body>
@@ -116,15 +125,18 @@
 <header>
     <div class="logo">SUPER BOWL LEGACY</div>
 
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="superbowls.html">SUPER BOWLS</a>
-        <a href="teams.html">TEAMS</a>
-        <a href="#">PLAYERS</a>
-        <a href="#">RECORDS</a>
-        <a href="#">HISTORY</a>
-        <a href="#">MOMENTS</a>
-    </nav>
+```
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="superbowls.html">SUPER BOWLS</a>
+    <a href="teams.html">TEAMS</a>
+    <a href="#">PLAYERS</a>
+    <a href="#">RECORDS</a>
+    <a href="#">HISTORY</a>
+    <a href="#">MOMENTS</a>
+</nav>
+```
+
 </header>
 
 <section class="hero">
@@ -134,59 +146,178 @@
 
 <section class="teams">
 
-    <div class="team-card">
-        <h2>New England Patriots</h2>
-        <p>Super Bowl appearances: 11</p>
-        <p class="wins">🏆 Championships: 6</p>
-    </div>
+```
+<!-- 6 CHAMPIONSHIPS -->
 
-    <div class="team-card">
-        <h2>Pittsburgh Steelers</h2>
-        <p>Super Bowl appearances: 8</p>
-        <p class="wins">🏆 Championships: 6</p>
-    </div>
+<div class="team-card">
+    <h2>New England Patriots</h2>
+    <p class="wins">🏆 Championships: 6</p>
+    <p class="appearances">Super Bowl appearances: 12</p>
+</div>
 
-    <div class="team-card">
-        <h2>Dallas Cowboys</h2>
-        <p>Super Bowl appearances: 8</p>
-        <p class="wins">🏆 Championships: 5</p>
-    </div>
+<div class="team-card">
+    <h2>Pittsburgh Steelers</h2>
+    <p class="wins">🏆 Championships: 6</p>
+    <p class="appearances">Super Bowl appearances: 8</p>
+</div>
 
-    <div class="team-card">
-        <h2>San Francisco 49ers</h2>
-        <p>Super Bowl appearances: 8</p>
-        <p class="wins">🏆 Championships: 5</p>
-    </div>
 
-    <div class="team-card">
-        <h2>Green Bay Packers</h2>
-        <p>Super Bowl appearances: 5</p>
-        <p class="wins">🏆 Championships: 4</p>
-    </div>
+<!-- 5 CHAMPIONSHIPS -->
 
-    <div class="team-card">
-        <h2>Kansas City Chiefs</h2>
-        <p>Super Bowl appearances: 7</p>
-        <p class="wins">🏆 Championships: 4</p>
-    </div>
+<div class="team-card">
+    <h2>Dallas Cowboys</h2>
+    <p class="wins">🏆 Championships: 5</p>
+    <p class="appearances">Super Bowl appearances: 8</p>
+</div>
 
-    <div class="team-card">
-        <h2>New York Giants</h2>
-        <p>Super Bowl appearances: 5</p>
-        <p class="wins">🏆 Championships: 4</p>
-    </div>
+<div class="team-card">
+    <h2>San Francisco 49ers</h2>
+    <p class="wins">🏆 Championships: 5</p>
+    <p class="appearances">Super Bowl appearances: 8</p>
+</div>
 
-    <div class="team-card">
-        <h2>Denver Broncos</h2>
-        <p>Super Bowl appearances: 8</p>
-        <p class="wins">🏆 Championships: 3</p>
-    </div>
 
-</section>
+<!-- 4 CHAMPIONSHIPS -->
 
-<footer>
-    © 2026 Super Bowl Legacy - By Jordi Gimix
-</footer>
+<div class="team-card">
+    <h2>Green Bay Packers</h2>
+    <p class="wins">🏆 Championships: 4</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
 
-</body>
-</html>
+<div class="team-card">
+    <h2>New York Giants</h2>
+    <p class="wins">🏆 Championships: 4</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
+
+<div class="team-card">
+    <h2>Kansas City Chiefs</h2>
+    <p class="wins">🏆 Championships: 4</p>
+    <p class="appearances">Super Bowl appearances: 7</p>
+</div>
+
+
+<!-- 3 CHAMPIONSHIPS -->
+
+<div class="team-card">
+    <h2>Denver Broncos</h2>
+    <p class="wins">🏆 Championships: 3</p>
+    <p class="appearances">Super Bowl appearances: 8</p>
+</div>
+
+<div class="team-card">
+    <h2>Las Vegas Raiders</h2>
+    <p class="wins">🏆 Championships: 3</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
+
+<div class="team-card">
+    <h2>Washington Commanders</h2>
+    <p class="wins">🏆 Championships: 3</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
+
+
+<!-- 2 CHAMPIONSHIPS -->
+
+<div class="team-card">
+    <h2>Baltimore Ravens</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 2</p>
+</div>
+
+<div class="team-card">
+    <h2>Indianapolis Colts</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 4</p>
+</div>
+
+<div class="team-card">
+    <h2>Miami Dolphins</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
+
+<div class="team-card">
+    <h2>Los Angeles Rams</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 6</p>
+</div>
+
+<div class="team-card">
+    <h2>Seattle Seahawks</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 4</p>
+</div>
+
+<div class="team-card">
+    <h2>Tampa Bay Buccaneers</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 2</p>
+</div>
+
+<div class="team-card">
+    <h2>Philadelphia Eagles</h2>
+    <p class="wins">🏆 Championships: 2</p>
+    <p class="appearances">Super Bowl appearances: 5</p>
+</div>
+
+
+<!-- 1 CHAMPIONSHIP -->
+
+<div class="team-card">
+    <h2>Chicago Bears</h2>
+    <p class="wins">🏆 Championships: 1</p>
+    <p class="appearances">Super Bowl appearances: 2</p>
+</div>
+
+<div class="team-card">
+    <h2>New York Jets</h2>
+    <p class="wins">🏆 Championships: 1</p>
+    <p class="appearances">Super Bowl appearances: 1</p>
+</div>
+
+
+<!-- 0 CHAMPIONSHIPS -->
+
+<div class="team-card">
+    <h2>Buffalo Bills</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 4</p>
+</div>
+
+<div class="team-card">
+    <h2>Cincinnati Bengals</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 3</p>
+</div>
+
+<div class="team-card">
+    <h2>Minnesota Vikings</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 4</p>
+</div>
+
+<div class="team-card">
+    <h2>Atlanta Falcons</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 2</p>
+</div>
+
+<div class="team-card">
+    <h2>Carolina Panthers</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 2</p>
+</div>
+
+<div class="team-card">
+    <h2>Arizona Cardinals</h2>
+    <p class="wins">🏆 Championships: 0</p>
+    <p class="appearances">Super Bowl appearances: 1</p>
+</div>
+
+<div class="team-card">
+    <h2>Los Angeles Chargers</h2>
+    <p class="wins">🏆 Champions
+```

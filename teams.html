@@ -94,45 +94,57 @@
     overflow: hidden;
 }
 
+.team-card {
+    background: linear-gradient(145deg, #0d192a, #08111f);
+    border: 2px solid #d4af37;
+    padding: 25px 50px;
+    min-height: 300px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+    overflow: hidden;
+}
+
 .team-card img {
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 180px;
     object-fit: contain;
-    margin-bottom: 12px;
+    flex-shrink: 0;
 }
 
 .team-card h2 {
-    font-size: 30px;
-    margin-bottom: 18px;
+    font-size: 42px;
+    margin-bottom: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.team-card p {
-    margin: 8px 0;
-    color: #c7cfdd;
-}
-
 .team-card .wins {
     color: #d4af37;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    margin-top: 5px;
+    margin: 8px 0;
 }
 
 .team-card .label {
     color: #c7cfdd;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .team-card .appearances {
     color: white;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
 }
 
+.team-info {
+    flex: 1;
+}
+    
     .team-card:hover {
         border-color: #d4af37;
     }
@@ -210,17 +222,22 @@
 <section class="section">
 
 
-<div class="teams-grid">
+<div class="team-card">
 
-    <div class="team-card">
     <img src="Logos/patriots.png" alt="New England Patriots">
-    <h2>New England Patriots</h2>
 
-    <div class="wins">🏆 6</div>
-    <div class="label">SUPER BOWL WINS</div>
+    <div class="team-info">
 
-    <div class="appearances">12</div>
-    <div class="label">SUPER BOWL APPEARANCES</div>
+        <h2>New England Patriots</h2>
+
+        <div class="wins">🏆 6</div>
+        <div class="label">SUPER BOWL WINS</div>
+
+        <div class="appearances">12</div>
+        <div class="label">SUPER BOWL APPEARANCES</div>
+
+    </div>
+
 </div>
 
     <div class="team-card">

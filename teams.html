@@ -84,15 +84,54 @@
   gap: 25px;
     }
 
-    .team-card {
-        background: linear-gradient(145deg, #0d192a, #08111f);
-        border: 2px solid #d4af37;
-        padding: 25px;
-        min-height: 300px;
-        transition: 0.3s;
-        text-align: center;
-        overflow: hidden;
-    }
+  .team-card {
+    background: linear-gradient(145deg, #0d192a, #08111f);
+    border: 2px solid #d4af37;
+    padding: 25px;
+    min-height: 300px;
+    transition: 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.team-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.team-card h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.team-card p {
+    margin: 8px 0;
+    color: #c7cfdd;
+}
+
+.team-card .wins {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.team-card .label {
+    color: #c7cfdd;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.team-card .appearances {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
 
     .team-card:hover {
         border-color: #d4af37;
@@ -174,10 +213,15 @@
 <div class="teams-grid">
 
     <div class="team-card">
-        <h2>New England Patriots</h2>
-        <p class="wins">🏆 Championships: 6</p>
-        <p>Super Bowl appearances: 12</p>
-    </div>
+    <img src="Logos/patriots.png" alt="New England Patriots">
+    <h2>New England Patriots</h2>
+
+    <div class="wins">🏆 6</div>
+    <div class="label">SUPER BOWL WINS</div>
+
+    <div class="appearances">12</div>
+    <div class="label">SUPER BOWL APPEARANCES</div>
+</div>
 
     <div class="team-card">
         <h2>Pittsburgh Steelers</h2>

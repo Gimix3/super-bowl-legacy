@@ -79,8 +79,8 @@
     }
 
   .teams-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -89,14 +89,15 @@
     border: 2px solid #d4af37;
     padding: 20px 35px;
     height: 190px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 45px;
     text-align: left;
     overflow: hidden;
     position: relative;
-    max-width: 1050px;
-    margin: 0 auto;
 }
 
 .team-card img {

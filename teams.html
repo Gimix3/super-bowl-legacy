@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -5,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<title>TEAMS | SUPER BOWL LEGACY</title>
+    <title>TEAMS | SUPER BOWL LEGACY</title>
 
 <style>
 
@@ -22,7 +22,7 @@
         color: white;
     }
 
-     header {
+    header {
         padding: 25px 50px;
         background: #071225;
         border-bottom: 1px solid #c9a227;
@@ -47,7 +47,6 @@
         color: #d4af37;
     }
 
-  
     .hero {
         text-align: center;
         padding: 90px 20px 70px;
@@ -78,102 +77,101 @@
         padding: 70px 25px 100px;
     }
 
-.teams-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-    margin-left: 140px;
-}
+    .teams-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-left: 140px;
+    }
 
-.team-card {
-    background: linear-gradient(145deg, #0d192a, #08111f);
-    border: 2px solid #d4af37;
-    padding: 15px 25px;
-    height: 160px;
-    width: 900px;
-    max-width: 900px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-}
+    .team-card {
+        background: #050b16;
+        border: 2px solid #d4af37;
+        padding: 15px 25px;
+        height: 160px;
+        width: 900px;
+        max-width: 900px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+    }
 
-.team-card img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
+    .team-card img {
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
 
-.team-info {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
+    .team-info {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
 
-.team-card h2 {
-    font-size: 48px;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+    .team-card h2 {
+        font-size: 48px;
+        line-height: 1;
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+    }
 
-.team-stats {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    min-width: 150px;
-}
+    .team-stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        min-width: 150px;
+    }
 
-.team-stats .trophy {
-    width: 55px;
-    height: 75px;
-    object-fit: contain;
-}
+    .team-stats .trophy {
+        width: 55px;
+        height: 75px;
+        object-fit: contain;
+    }
 
-.team-stats .number {
-    color: #d4af37;
-    font-size: 65px;
-    font-weight: bold;
-    line-height: 1;
-}
+    .team-stats .number {
+        color: #d4af37;
+        font-size: 65px;
+        font-weight: bold;
+        line-height: 1;
+    }
 
-.team-stats .label {
-    display: none;
-}
+    .team-stats .label {
+        display: none;
+    }
 
-.team-card .wins {
-    color: #d4af37;
-    font-size: 26px;
-    font-weight: bold;
-    margin: 8px 0;
-}
+    .team-card .wins {
+        color: #d4af37;
+        font-size: 26px;
+        font-weight: bold;
+        margin: 8px 0;
+    }
 
-.team-card .label {
-    color: #c7cfdd;
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
+    .team-card .label {
+        color: #c7cfdd;
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
 
-.team-card .appearances {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-}
+    .team-card .appearances {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-   
     .team-card:hover {
         border-color: #d4af37;
     }
 
-    
     .team-card p {
         margin: 10px 0;
         color: #c7cfdd;
@@ -184,7 +182,7 @@
         font-weight: bold;
     }
 
-   footer {
+    footer {
         padding: 40px 8%;
         text-align: center;
         background: #030711;
@@ -193,7 +191,6 @@
         letter-spacing: 1px;
     }
 
-  
     @media (max-width: 900px) {
 
         header {
@@ -202,37 +199,39 @@
         }
 
         .teams-grid {
-            grid-template-columns: 1fr;
+            margin-left: 0;
+        }
+
+        .team-card {
+            width: 100%;
+            max-width: 900px;
         }
 
     }
 
-  .team-card.patriots {
-    background: #002244; /* blau Patriots */
-    border-color: #c8102e; /* vermell Patriots */
-}
+    /* PATRIOTS - mateix estil que totes les altres fitxes */
 
-.team-card.patriots .patriots-red {
-    color: #c8102e;
-}
+    .team-card.patriots {
+        background: #050b16;
+        border-color: #d4af37;
+    }
 
-.team-card.patriots .patriots-white {
-    color: #ffffff;
-}
+    .team-card.patriots .patriots-red,
+    .team-card.patriots .patriots-white {
+        color: white;
+    }
 
-.team-card.patriots .number {
-    color: #d4af37;
-}
+    .team-card.patriots .number {
+        color: #d4af37;
+    }
 
 </style>
-
 
 </head>
 
 <body>
 
 <header>
-
 
 <nav>
     <a href="index.html">HOME</a>
@@ -241,30 +240,30 @@
     <a href="mvp.html">MVP</a>
 </nav>
 
-
 </header>
 
 <section class="hero">
-
 
 <div class="eyebrow">SUPER BOWL LEGACY</div>
 
 <h1>SUPER BOWL <span>TEAMS</span></h1>
 
-
 </section>
 
 <section class="section">
+
 <div class="teams-grid">
+
+<!-- NEW ENGLAND PATRIOTS -->
 <div class="team-card patriots">
 
     <img src="Logos/patriots.png" alt="New England Patriots">
 
     <div class="team-info">
         <h2>
-    <span class="patriots-red">NEW ENGLAND</span><br>
-    <span class="patriots-white">PATRIOTS</span>
-</h2>
+            <span class="patriots-red">NEW ENGLAND</span><br>
+            <span class="patriots-white">PATRIOTS</span>
+        </h2>
     </div>
 
     <div class="team-stats">
@@ -274,8 +273,7 @@
 
 </div>
 
-</div>
-    <!-- PITTSBURGH STEELERS -->
+<!-- PITTSBURGH STEELERS -->
 <div class="team-card">
     <img src="Logos/steelers.png" alt="Pittsburgh Steelers">
     <div class="team-info">
@@ -373,7 +371,7 @@
 
 <!-- WASHINGTON COMMANDERS -->
 <div class="team-card">
-    <img src="Logos/commanders.png" alt="Washington Commanders">
+    <img src="Logos/washington.jpg" alt="Washington Commanders">
     <div class="team-info">
         <h2>WASHINGTON<br>COMMANDERS</h2>
     </div>
@@ -385,7 +383,7 @@
 
 <!-- BALTIMORE RAVENS -->
 <div class="team-card">
-    <img src="Logos/ravens.png" alt="Baltimore Ravens">
+    <img src="Logos/ravens.jpg" alt="Baltimore Ravens">
     <div class="team-info">
         <h2>BALTIMORE<br>RAVENS</h2>
     </div>
@@ -402,7 +400,7 @@
         <h2>INDIANAPOLIS<br>COLTS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
@@ -414,19 +412,19 @@
         <h2>MIAMI<br>DOLPHINS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
 
 <!-- LOS ANGELES RAMS -->
 <div class="team-card">
-    <img src="Logos/rams.png" alt="Los Angeles Rams">
+    <img src="Logos/rams.jpg" alt="Los Angeles Rams">
     <div class="team-info">
         <h2>LOS ANGELES<br>RAMS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
@@ -438,7 +436,7 @@
         <h2>SEATTLE<br>SEAHAWKS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
@@ -450,19 +448,19 @@
         <h2>TAMPA BAY<br>BUCCANEERS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
 
 <!-- PHILADELPHIA EAGLES -->
 <div class="team-card">
-    <img src="Logos/eagles.png" alt="Philadelphia Eagles">
+    <img src="Logos/eagles.jpg" alt="Philadelphia Eagles">
     <div class="team-info">
         <h2>PHILADELPHIA<br>EAGLES</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">2</div>
     </div>
 </div>
@@ -474,7 +472,7 @@
         <h2>CHICAGO<br>BEARS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">1</div>
     </div>
 </div>
@@ -486,7 +484,7 @@
         <h2>NEW YORK<br>JETS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">1</div>
     </div>
 </div>
@@ -498,19 +496,19 @@
         <h2>BUFFALO<br>BILLS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
 
 <!-- CINCINNATI BENGALS -->
 <div class="team-card">
-    <img src="Logos/bengals.png" alt="Cincinnati Bengals">
+    <img src="Logos/bengals.jpg" alt="Cincinnati Bengals">
     <div class="team-info">
         <h2>CINCINNATI<br>BENGALS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -522,7 +520,7 @@
         <h2>MINNESOTA<br>VIKINGS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -534,7 +532,7 @@
         <h2>ATLANTA<br>FALCONS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -546,7 +544,7 @@
         <h2>CAROLINA<br>PANTHERS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -558,7 +556,7 @@
         <h2>ARIZONA<br>CARDINALS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -570,7 +568,7 @@
         <h2>LOS ANGELES<br>CHARGERS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -582,19 +580,19 @@
         <h2>TENNESSEE<br>TITANS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
 
 <!-- CLEVELAND BROWNS -->
 <div class="team-card">
-    <img src="Logos/browns.png" alt="Cleveland Browns">
+    <img src="Logos/browns.jpg" alt="Cleveland Browns">
     <div class="team-info">
         <h2>CLEVELAND<br>BROWNS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -606,7 +604,7 @@
         <h2>DETROIT<br>LIONS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -618,7 +616,7 @@
         <h2>HOUSTON<br>TEXANS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
@@ -630,12 +628,12 @@
         <h2>JACKSONVILLE<br>JAGUARS</h2>
     </div>
     <div class="team-stats">
-        <img src="Logos/lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
+        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
         <div class="number">0</div>
     </div>
 </div>
-</div>
 
+</div>
 </section>
 
 <footer>
@@ -644,3 +642,4 @@
 
 </body>
 </html>
+```

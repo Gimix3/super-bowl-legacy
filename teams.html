@@ -1,6 +1,4 @@
-```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,638 +6,1749 @@
 
     <title>TEAMS | SUPER BOWL LEGACY</title>
 
-<style>
+    <style>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #050b16;
-        color: white;
-    }
-
-    header {
-        padding: 25px 50px;
-        background: #071225;
-        border-bottom: 1px solid #c9a227;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 25px;
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
-
-    nav a:hover {
-        color: #d4af37;
-    }
-
-    nav a.active {
-        color: #d4af37;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 90px 20px 70px;
-        background: #050b16;
-    }
-
-    .eyebrow {
-        color: #d4af37;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 4px;
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: clamp(55px, 8vw, 100px);
-        line-height: 0.9;
-        letter-spacing: -4px;
-    }
-
-    h1 span {
-        color: #d4af37;
-    }
-
-    .section {
-        max-width: 1250px;
-        margin: auto;
-        padding: 70px 25px 100px;
-    }
-
-    .teams-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        margin-left: 140px;
-    }
-
-    .team-card {
-        background: #050b16;
-        border: 2px solid #d4af37;
-        padding: 15px 25px;
-        height: 160px;
-        width: 900px;
-        max-width: 900px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        text-align: left;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .team-card img {
-        width: 130px;
-        height: 130px;
-        object-fit: contain;
-        flex-shrink: 0;
-    }
-
-    .team-info {
-        flex: 1;
-        display: flex;
-        align-items: center;
-    }
-
-    .team-card h2 {
-        font-size: 48px;
-        line-height: 1;
-        margin: 0;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: white;
-    }
-
-    .team-stats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        min-width: 150px;
-    }
-
-    .team-stats .trophy {
-        width: 55px;
-        height: 75px;
-        object-fit: contain;
-    }
-
-    .team-stats .number {
-        color: #d4af37;
-        font-size: 65px;
-        font-weight: bold;
-        line-height: 1;
-    }
-
-    .team-stats .label {
-        display: none;
-    }
-
-    .team-card .wins {
-        color: #d4af37;
-        font-size: 26px;
-        font-weight: bold;
-        margin: 8px 0;
-    }
-
-    .team-card .label {
-        color: #c7cfdd;
-        font-size: 13px;
-        letter-spacing: 2px;
-        margin-bottom: 18px;
-    }
-
-    .team-card .appearances {
-        color: white;
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .team-card:hover {
-        border-color: #d4af37;
-    }
-
-    .team-card p {
-        margin: 10px 0;
-        color: #c7cfdd;
-    }
-
-    .wins {
-        color: white;
-        font-weight: bold;
-    }
-
-    footer {
-        padding: 40px 8%;
-        text-align: center;
-        background: #030711;
-        color: #667080;
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 900px) {
-
-        header {
-            flex-direction: column;
-            gap: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .teams-grid {
-            margin-left: 0;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050b16;
+            color: white;
+        }
+
+        header {
+            padding: 25px 50px;
+            background: #071225;
+            border-bottom: 1px solid #c9a227;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        nav a.active {
+            color: #d4af37;
+        }
+
+        .separator {
+            width: 1px;
+            height: 18px;
+            background: #c9a227;
+        }
+
+        .page-title {
+            text-align: center;
+            margin: 55px 0 45px;
+        }
+
+        .page-title h1 {
+            font-size: 46px;
+            letter-spacing: 4px;
+            color: #d4af37;
+        }
+
+        .page-title p {
+            margin-top: 12px;
+            color: #888;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .teams-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 80px;
         }
 
         .team-card {
-            width: 100%;
-            max-width: 900px;
+            position: relative;
+            min-height: 300px;
+            margin-bottom: 35px;
+            padding: 30px 45px;
+
+            background: linear-gradient(
+                135deg,
+                #0d192a,
+                #08111f
+            );
+
+            border: 2px solid #c9a227;
+
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
         }
 
-    }
+        .team-left {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* PATRIOTS - mateix estil que totes les altres fitxes */
+        .team-logo {
+            width: 210px;
+            height: 210px;
+            object-fit: contain;
+        }
 
-    .team-card.patriots {
-        background: #050b16;
-        border-color: #d4af37;
-    }
+        .team-right {
+            width: 60%;
+            padding-left: 25px;
+        }
 
-    .team-card.patriots .patriots-red,
-    .team-card.patriots .patriots-white {
-        color: white;
-    }
+        .team-name {
+            font-size: 42px;
+            line-height: 0.95;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
 
-    .team-card.patriots .number {
-        color: #d4af37;
-    }
+        .team-name span {
+            display: block;
+        }
 
-</style>
+        .trophy-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
 
+        .trophy {
+            width: 55px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .wins {
+            font-size: 64px;
+            line-height: 1;
+            font-weight: 900;
+            color: #d4af37;
+        }
+
+        .appearances {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+
+            text-align: center;
+
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           TEAM COLORS
+        ========================= */
+
+        .patriots .team-name span:first-child {
+            color: #c8102e;
+        }
+
+        .patriots .team-name span:last-child {
+            color: white;
+        }
+
+        .packers .team-name {
+            color: #ffcc00;
+        }
+
+        .steelers .team-name {
+            color: #ffd700;
+        }
+
+        .bears .team-name {
+            color: #d96a1b;
+        }
+
+        .giants .team-name {
+            color: #4a78b8;
+        }
+
+        .jets .team-name {
+            color: #4f8f5b;
+        }
+
+        .commanders .team-name {
+            color: #9b4652;
+        }
+
+        .eagles .team-name {
+            color: #7aa88a;
+        }
+
+        .ravens .team-name {
+            color: #9a82c7;
+        }
+
+        .colts .team-name {
+            color: #4169a1;
+        }
+
+        .seahawks .team-name {
+            color: #7aa889;
+        }
+
+        .broncos .team-name {
+            color: #5f91c7;
+        }
+
+        .cowboys .team-name {
+            color: #8ea8c7;
+        }
+
+        .49ers .team-name {
+            color: #d05b5b;
+        }
+
+        .raiders .team-name {
+            color: #bdbdbd;
+        }
+
+        .chiefs .team-name {
+            color: #d94b4b;
+        }
+
+        .dolphins .team-name {
+            color: #5bb8b0;
+        }
+
+        .bills .team-name {
+            color: #668dcc;
+        }
+
+        .rams .team-name {
+            color: #d4af37;
+        }
+
+        .vikings .team-name {
+            color: #987fc4;
+        }
+
+        .chargers .team-name {
+            color: #6da4c9;
+        }
+
+        .bengals .team-name {
+            color: #d96b2b;
+        }
+
+        .falcons .team-name {
+            color: #c95c69;
+        }
+
+        .panthers .team-name {
+            color: #6598b8;
+        }
+
+        .saints .team-name {
+            color: #c4a96b;
+        }
+
+        .cardinals .team-name {
+            color: #c95a63;
+        }
+
+        .buccaneers .team-name {
+            color: #a95b65;
+        }
+
+        .colts .team-name {
+            color: #4169a1;
+        }
+
+        .titans .team-name {
+            color: #6a9bb8;
+        }
+
+        .browns .team-name {
+            color: #a96b3e;
+        }
+
+        .lions .team-name {
+            color: #7195b5;
+        }
+
+        .jaguars .team-name {
+            color: #5d9b91;
+        }
+
+        .texans .team-name {
+            color: #8b6470;
+        }
+
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .page-title h1 {
+                font-size: 34px;
+            }
+
+            .team-card {
+                min-height: 270px;
+                padding: 25px;
+            }
+
+            .team-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .team-name {
+                font-size: 30px;
+            }
+
+            .wins {
+                font-size: 48px;
+            }
+
+            .trophy {
+                width: 40px;
+                height: 55px;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 9px;
+            }
+
+            .team-card {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 45px;
+            }
+
+            .team-left,
+            .team-right {
+                width: 100%;
+            }
+
+            .team-right {
+                padding-left: 0;
+                margin-top: 15px;
+            }
+
+            .team-logo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .team-name {
+                font-size: 28px;
+            }
+
+            .trophy-row {
+                justify-content: center;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+
 <header>
 
-<nav>
-    <a href="index.html">HOME</a>
-    <a href="superbowls.html">SUPER BOWLS</a>
-    <a href="teams.html" class="active">TEAMS</a>
-    <a href="mvp.html">MVP</a>
-</nav>
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <div class="separator"></div>
+
+        <a href="superbowls.html">SUPER BOWLS</a>
+
+        <div class="separator"></div>
+
+        <a href="teams.html" class="active">TEAMS</a>
+
+        <div class="separator"></div>
+
+        <a href="mvp.html">MVP</a>
+
+    </nav>
 
 </header>
 
-<section class="hero">
 
-<div class="eyebrow">SUPER BOWL LEGACY</div>
 
-<h1>SUPER BOWL <span>TEAMS</span></h1>
+<div class="page-title">
 
-</section>
+    <h1>TEAMS</h1>
 
-<section class="section">
-
-<div class="teams-grid">
-
-<!-- NEW ENGLAND PATRIOTS -->
-<div class="team-card patriots">
-
-    <img src="Logos/patriots.png" alt="New England Patriots">
-
-    <div class="team-info">
-        <h2>
-            <span class="patriots-red">NEW ENGLAND</span><br>
-            <span class="patriots-white">PATRIOTS</span>
-        </h2>
-    </div>
-
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">6</div>
-    </div>
+    <p>THE FRANCHISES THAT MADE SUPER BOWL HISTORY</p>
 
 </div>
 
-<!-- PITTSBURGH STEELERS -->
-<div class="team-card">
-    <img src="Logos/steelers.png" alt="Pittsburgh Steelers">
-    <div class="team-info">
-        <h2>PITTSBURGH<br>STEELERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">6</div>
-    </div>
-</div>
 
-<!-- DALLAS COWBOYS -->
-<div class="team-card">
-    <img src="Logos/cowboys.png" alt="Dallas Cowboys">
-    <div class="team-info">
-        <h2>DALLAS<br>COWBOYS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">5</div>
-    </div>
-</div>
 
-<!-- SAN FRANCISCO 49ERS -->
-<div class="team-card">
-    <img src="Logos/49ers.jpg" alt="San Francisco 49ers">
-    <div class="team-info">
-        <h2>SAN FRANCISCO<br>49ERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">5</div>
-    </div>
-</div>
+<div class="teams-container">
 
-<!-- GREEN BAY PACKERS -->
-<div class="team-card">
-    <img src="Logos/packers.png" alt="Green Bay Packers">
-    <div class="team-info">
-        <h2>GREEN BAY<br>PACKERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">4</div>
-    </div>
-</div>
 
-<!-- NEW YORK GIANTS -->
-<div class="team-card">
-    <img src="Logos/giants.jpg" alt="New York Giants">
-    <div class="team-info">
-        <h2>NEW YORK<br>GIANTS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">4</div>
-    </div>
-</div>
 
-<!-- KANSAS CITY CHIEFS -->
-<div class="team-card">
-    <img src="Logos/chiefs.png" alt="Kansas City Chiefs">
-    <div class="team-info">
-        <h2>KANSAS CITY<br>CHIEFS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">3</div>
-    </div>
-</div>
+    <!-- 1. GREEN BAY PACKERS -->
 
-<!-- DENVER BRONCOS -->
-<div class="team-card">
-    <img src="Logos/broncos.jpg" alt="Denver Broncos">
-    <div class="team-info">
-        <h2>DENVER<br>BRONCOS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">3</div>
-    </div>
-</div>
+    <div class="team-card packers">
 
-<!-- LAS VEGAS RAIDERS -->
-<div class="team-card">
-    <img src="Logos/raiders.png" alt="Las Vegas Raiders">
-    <div class="team-info">
-        <h2>LAS VEGAS<br>RAIDERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">3</div>
-    </div>
-</div>
+        <div class="team-left">
 
-<!-- WASHINGTON COMMANDERS -->
-<div class="team-card">
-    <img src="Logos/washington.jpg" alt="Washington Commanders">
-    <div class="team-info">
-        <h2>WASHINGTON<br>COMMANDERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">3</div>
-    </div>
-</div>
+            <img src="Logos/packers.png"
+                 class="team-logo"
+                 alt="Green Bay Packers">
 
-<!-- BALTIMORE RAVENS -->
-<div class="team-card">
-    <img src="Logos/ravens.jpg" alt="Baltimore Ravens">
-    <div class="team-info">
-        <h2>BALTIMORE<br>RAVENS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+        </div>
 
-<!-- INDIANAPOLIS COLTS -->
-<div class="team-card">
-    <img src="Logos/colts.png" alt="Indianapolis Colts">
-    <div class="team-info">
-        <h2>INDIANAPOLIS<br>COLTS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+        <div class="team-right">
 
-<!-- MIAMI DOLPHINS -->
-<div class="team-card">
-    <img src="Logos/dolphins.png" alt="Miami Dolphins">
-    <div class="team-info">
-        <h2>MIAMI<br>DOLPHINS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+            <div class="team-name">
 
-<!-- LOS ANGELES RAMS -->
-<div class="team-card">
-    <img src="Logos/rams.jpg" alt="Los Angeles Rams">
-    <div class="team-info">
-        <h2>LOS ANGELES<br>RAMS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+                <span>GREEN BAY</span>
+                <span>PACKERS</span>
 
-<!-- SEATTLE SEAHAWKS -->
-<div class="team-card">
-    <img src="Logos/seahawks.png" alt="Seattle Seahawks">
-    <div class="team-info">
-        <h2>SEATTLE<br>SEAHAWKS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+            </div>
 
-<!-- TAMPA BAY BUCCANEERS -->
-<div class="team-card">
-    <img src="Logos/buccaneers.png" alt="Tampa Bay Buccaneers">
-    <div class="team-info">
-        <h2>TAMPA BAY<br>BUCCANEERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+            <div class="trophy-row">
 
-<!-- PHILADELPHIA EAGLES -->
-<div class="team-card">
-    <img src="Logos/eagles.jpg" alt="Philadelphia Eagles">
-    <div class="team-info">
-        <h2>PHILADELPHIA<br>EAGLES</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">2</div>
-    </div>
-</div>
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
 
-<!-- CHICAGO BEARS -->
-<div class="team-card">
-    <img src="Logos/bears.png" alt="Chicago Bears">
-    <div class="team-info">
-        <h2>CHICAGO<br>BEARS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">1</div>
-    </div>
-</div>
+                <div class="wins">4</div>
 
-<!-- NEW YORK JETS -->
-<div class="team-card">
-    <img src="Logos/jets.png" alt="New York Jets">
-    <div class="team-info">
-        <h2>NEW YORK<br>JETS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">1</div>
-    </div>
-</div>
+            </div>
 
-<!-- BUFFALO BILLS -->
-<div class="team-card">
-    <img src="Logos/bills.png" alt="Buffalo Bills">
-    <div class="team-info">
-        <h2>BUFFALO<br>BILLS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+        </div>
 
-<!-- CINCINNATI BENGALS -->
-<div class="team-card">
-    <img src="Logos/bengals.jpg" alt="Cincinnati Bengals">
-    <div class="team-info">
-        <h2>CINCINNATI<br>BENGALS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
 
-<!-- MINNESOTA VIKINGS -->
-<div class="team-card">
-    <img src="Logos/vikings.png" alt="Minnesota Vikings">
-    <div class="team-info">
-        <h2>MINNESOTA<br>VIKINGS</h2>
     </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
 
-<!-- ATLANTA FALCONS -->
-<div class="team-card">
-    <img src="Logos/falcons.png" alt="Atlanta Falcons">
-    <div class="team-info">
-        <h2>ATLANTA<br>FALCONS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
 
-<!-- CAROLINA PANTHERS -->
-<div class="team-card">
-    <img src="Logos/panthers.png" alt="Carolina Panthers">
-    <div class="team-info">
-        <h2>CAROLINA<br>PANTHERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
 
-<!-- ARIZONA CARDINALS -->
-<div class="team-card">
-    <img src="Logos/cardinals.png" alt="Arizona Cardinals">
-    <div class="team-info">
-        <h2>ARIZONA<br>CARDINALS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+    <!-- 2. PITTSBURGH STEELERS -->
 
-<!-- LOS ANGELES CHARGERS -->
-<div class="team-card">
-    <img src="Logos/chargers.png" alt="Los Angeles Chargers">
-    <div class="team-info">
-        <h2>LOS ANGELES<br>CHARGERS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+    <div class="team-card steelers">
 
-<!-- TENNESSEE TITANS -->
-<div class="team-card">
-    <img src="Logos/titans.png" alt="Tennessee Titans">
-    <div class="team-info">
-        <h2>TENNESSEE<br>TITANS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+        <div class="team-left">
 
-<!-- CLEVELAND BROWNS -->
-<div class="team-card">
-    <img src="Logos/browns.jpg" alt="Cleveland Browns">
-    <div class="team-info">
-        <h2>CLEVELAND<br>BROWNS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+            <img src="Logos/steelers.png"
+                 class="team-logo"
+                 alt="Pittsburgh Steelers">
 
-<!-- DETROIT LIONS -->
-<div class="team-card">
-    <img src="Logos/lions.png" alt="Detroit Lions">
-    <div class="team-info">
-        <h2>DETROIT<br>LIONS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+        </div>
 
-<!-- HOUSTON TEXANS -->
-<div class="team-card">
-    <img src="Logos/texans.png" alt="Houston Texans">
-    <div class="team-info">
-        <h2>HOUSTON<br>TEXANS</h2>
-    </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
-    </div>
-</div>
+        <div class="team-right">
 
-<!-- JACKSONVILLE JAGUARS -->
-<div class="team-card">
-    <img src="Logos/jaguars.png" alt="Jacksonville Jaguars">
-    <div class="team-info">
-        <h2>JACKSONVILLE<br>JAGUARS</h2>
+            <div class="team-name">
+
+                <span>PITTSBURGH</span>
+                <span>STEELERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">6</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 8
+        </div>
+
     </div>
-    <div class="team-stats">
-        <img src="lombardi-trophy.png" class="trophy" alt="Vince Lombardi Trophy">
-        <div class="number">0</div>
+
+
+
+    <!-- 3. NEW ENGLAND PATRIOTS -->
+
+    <div class="team-card patriots">
+
+        <div class="team-left">
+
+            <img src="Logos/patriots.png"
+                 class="team-logo"
+                 alt="New England Patriots">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>NEW ENGLAND</span>
+                <span>PATRIOTS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">6</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 12
+        </div>
+
     </div>
-</div>
+
+
+
+    <!-- 4. SAN FRANCISCO 49ERS -->
+
+    <div class="team-card 49ers">
+
+        <div class="team-left">
+
+            <img src="Logos/49ers.png"
+                 class="team-logo"
+                 alt="San Francisco 49ers">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>SAN FRANCISCO</span>
+                <span>49ERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">5</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 8
+        </div>
+
+    </div>
+
+
+
+    <!-- 5. DALLAS COWBOYS -->
+
+    <div class="team-card cowboys">
+
+        <div class="team-left">
+
+            <img src="Logos/cowboys.png"
+                 class="team-logo"
+                 alt="Dallas Cowboys">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>DALLAS</span>
+                <span>COWBOYS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">5</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 8
+        </div>
+
+    </div>
+
+
+
+    <!-- 6. DENVER BRONCOS -->
+
+    <div class="team-card broncos">
+
+        <div class="team-left">
+
+            <img src="Logos/broncos.png"
+                 class="team-logo"
+                 alt="Denver Broncos">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>DENVER</span>
+                <span>BRONCOS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">3</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 8
+        </div>
+
+    </div>
+
+
+
+    <!-- 7. KANSAS CITY CHIEFS -->
+
+    <div class="team-card chiefs">
+
+        <div class="team-left">
+
+            <img src="Logos/chiefs.png"
+                 class="team-logo"
+                 alt="Kansas City Chiefs">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>KANSAS CITY</span>
+                <span>CHIEFS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">4</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 7
+        </div>
+
+    </div>
+
+
+
+    <!-- 8. LAS VEGAS RAIDERS -->
+
+    <div class="team-card raiders">
+
+        <div class="team-left">
+
+            <img src="Logos/raiders.png"
+                 class="team-logo"
+                 alt="Las Vegas Raiders">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>LAS VEGAS</span>
+                <span>RAIDERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">3</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 9. NEW YORK GIANTS -->
+
+    <div class="team-card giants">
+
+        <div class="team-left">
+
+            <img src="Logos/giants.png"
+                 class="team-logo"
+                 alt="New York Giants">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>NEW YORK</span>
+                <span>GIANTS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">4</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 10. MIAMI DOLPHINS -->
+
+    <div class="team-card dolphins">
+
+        <div class="team-left">
+
+            <img src="Logos/dolphins.png"
+                 class="team-logo"
+                 alt="Miami Dolphins">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>MIAMI</span>
+                <span>DOLPHINS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 11. WASHINGTON COMMANDERS -->
+
+    <div class="team-card commanders">
+
+        <div class="team-left">
+
+            <img src="Logos/commanders.png"
+                 class="team-logo"
+                 alt="Washington Commanders">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>WASHINGTON</span>
+                <span>COMMANDERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">3</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 12. LOS ANGELES RAMS -->
+
+    <div class="team-card rams">
+
+        <div class="team-left">
+
+            <img src="Logos/rams.png"
+                 class="team-logo"
+                 alt="Los Angeles Rams">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>LOS ANGELES</span>
+                <span>RAMS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 13. PHILADELPHIA EAGLES -->
+
+    <div class="team-card eagles">
+
+        <div class="team-left">
+
+            <img src="Logos/eagles.png"
+                 class="team-logo"
+                 alt="Philadelphia Eagles">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>PHILADELPHIA</span>
+                <span>EAGLES</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 5
+        </div>
+
+    </div>
+
+
+
+    <!-- 14. BUFFALO BILLS -->
+
+    <div class="team-card bills">
+
+        <div class="team-left">
+
+            <img src="Logos/bills.png"
+                 class="team-logo"
+                 alt="Buffalo Bills">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>BUFFALO</span>
+                <span>BILLS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 4
+        </div>
+
+    </div>
+
+
+
+    <!-- 15. MINNESOTA VIKINGS -->
+
+    <div class="team-card vikings">
+
+        <div class="team-left">
+
+            <img src="Logos/vikings.png"
+                 class="team-logo"
+                 alt="Minnesota Vikings">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>MINNESOTA</span>
+                <span>VIKINGS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 4
+        </div>
+
+    </div>
+
+
+
+    <!-- 16. INDIANAPOLIS COLTS -->
+
+    <div class="team-card colts">
+
+        <div class="team-left">
+
+            <img src="Logos/colts.png"
+                 class="team-logo"
+                 alt="Indianapolis Colts">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>INDIANAPOLIS</span>
+                <span>COLTS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 4
+        </div>
+
+    </div>
+
+
+
+    <!-- 17. SEATTLE SEAHAWKS -->
+
+    <div class="team-card seahawks">
+
+        <div class="team-left">
+
+            <img src="Logos/seahawks.png"
+                 class="team-logo"
+                 alt="Seattle Seahawks">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>SEATTLE</span>
+                <span>SEAHAWKS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">1</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 3
+        </div>
+
+    </div>
+
+
+
+    <!-- 18. CINCINNATI BENGALS -->
+
+    <div class="team-card bengals">
+
+        <div class="team-left">
+
+            <img src="Logos/bengals.png"
+                 class="team-logo"
+                 alt="Cincinnati Bengals">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>CINCINNATI</span>
+                <span>BENGALS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 3
+        </div>
+
+    </div>
+
+
+
+    <!-- 19. BALTIMORE RAVENS -->
+
+    <div class="team-card ravens">
+
+        <div class="team-left">
+
+            <img src="Logos/ravens.png"
+                 class="team-logo"
+                 alt="Baltimore Ravens">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>BALTIMORE</span>
+                <span>RAVENS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 2
+        </div>
+
+    </div>
+
+
+
+    <!-- 20. ATLANTA FALCONS -->
+
+    <div class="team-card falcons">
+
+        <div class="team-left">
+
+            <img src="Logos/falcons.png"
+                 class="team-logo"
+                 alt="Atlanta Falcons">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>ATLANTA</span>
+                <span>FALCONS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 2
+        </div>
+
+    </div>
+
+
+
+    <!-- 21. CAROLINA PANTHERS -->
+
+    <div class="team-card panthers">
+
+        <div class="team-left">
+
+            <img src="Logos/panthers.png"
+                 class="team-logo"
+                 alt="Carolina Panthers">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>CAROLINA</span>
+                <span>PANTHERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 2
+        </div>
+
+    </div>
+
+
+
+    <!-- 22. CHICAGO BEARS -->
+
+    <div class="team-card bears">
+
+        <div class="team-left">
+
+            <img src="Logos/bears.png"
+                 class="team-logo"
+                 alt="Chicago Bears">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>CHICAGO</span>
+                <span>BEARS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">1</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 2
+        </div>
+
+    </div>
+
+
+
+    <!-- 23. TAMPA BAY BUCCANEERS -->
+
+    <div class="team-card buccaneers">
+
+        <div class="team-left">
+
+            <img src="Logos/buccaneers.png"
+                 class="team-logo"
+                 alt="Tampa Bay Buccaneers">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>TAMPA BAY</span>
+                <span>BUCCANEERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">2</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 2
+        </div>
+
+    </div>
+
+
+
+    <!-- 24. NEW YORK JETS -->
+
+    <div class="team-card jets">
+
+        <div class="team-left">
+
+            <img src="Logos/jets.png"
+                 class="team-logo"
+                 alt="New York Jets">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>NEW YORK</span>
+                <span>JETS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">1</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 1
+        </div>
+
+    </div>
+
+
+
+    <!-- 25. LOS ANGELES CHARGERS -->
+
+    <div class="team-card chargers">
+
+        <div class="team-left">
+
+            <img src="Logos/chargers.png"
+                 class="team-logo"
+                 alt="Los Angeles Chargers">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>LOS ANGELES</span>
+                <span>CHARGERS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 1
+        </div>
+
+    </div>
+
+
+
+    <!-- 26. ARIZONA CARDINALS -->
+
+    <div class="team-card cardinals">
+
+        <div class="team-left">
+
+            <img src="Logos/cardinals.png"
+                 class="team-logo"
+                 alt="Arizona Cardinals">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>ARIZONA</span>
+                <span>CARDINALS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 1
+        </div>
+
+    </div>
+
+
+
+    <!-- 27. NEW ORLEANS SAINTS -->
+
+    <div class="team-card saints">
+
+        <div class="team-left">
+
+            <img src="Logos/saints.png"
+                 class="team-logo"
+                 alt="New Orleans Saints">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>NEW ORLEANS</span>
+                <span>SAINTS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">1</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 1
+        </div>
+
+    </div>
+
+
+
+    <!-- 28. TENNESSEE TITANS -->
+
+    <div class="team-card titans">
+
+        <div class="team-left">
+
+            <img src="Logos/titans.png"
+                 class="team-logo"
+                 alt="Tennessee Titans">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>TENNESSEE</span>
+                <span>TITANS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 1
+        </div>
+
+    </div>
+
+
+
+    <!-- 29. CLEVELAND BROWNS -->
+
+    <div class="team-card browns">
+
+        <div class="team-left">
+
+            <img src="Logos/browns.png"
+                 class="team-logo"
+                 alt="Cleveland Browns">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>CLEVELAND</span>
+                <span>BROWNS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 0
+        </div>
+
+    </div>
+
+
+
+    <!-- 30. DETROIT LIONS -->
+
+    <div class="team-card lions">
+
+        <div class="team-left">
+
+            <img src="Logos/lions.png"
+                 class="team-logo"
+                 alt="Detroit Lions">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>DETROIT</span>
+                <span>LIONS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 0
+        </div>
+
+    </div>
+
+
+
+    <!-- 31. JACKSONVILLE JAGUARS -->
+
+    <div class="team-card jaguars">
+
+        <div class="team-left">
+
+            <img src="Logos/jaguars.png"
+                 class="team-logo"
+                 alt="Jacksonville Jaguars">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>JACKSONVILLE</span>
+                <span>JAGUARS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 0
+        </div>
+
+    </div>
+
+
+
+    <!-- 32. HOUSTON TEXANS -->
+
+    <div class="team-card texans">
+
+        <div class="team-left">
+
+            <img src="Logos/texans.png"
+                 class="team-logo"
+                 alt="Houston Texans">
+
+        </div>
+
+        <div class="team-right">
+
+            <div class="team-name">
+
+                <span>HOUSTON</span>
+                <span>TEXANS</span>
+
+            </div>
+
+            <div class="trophy-row">
+
+                <img src="Logos/lombardi-trophy.png"
+                     class="trophy"
+                     alt="Lombardi Trophy">
+
+                <div class="wins">0</div>
+
+            </div>
+
+        </div>
+
+        <div class="appearances">
+            SUPER BOWL APPEARANCES: 0
+        </div>
+
+    </div>
+
+
 
 </div>
-</section>
-
-<footer>
-    © 2026 Super Bowl Legacy - By Jordi Gimix
-</footer>
 
 </body>
 </html>
-```

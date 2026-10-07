@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,25 +18,56 @@ body {
     color: white;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header {
-    background: linear-gradient(135deg, #07152f, #020611);
-    padding: 35px 20px;
-    text-align: center;
+    background: #071225;
+    padding: 25px 50px 0;
     border-bottom: 2px solid #c9a227;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 55px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: 4px;
     color: #d4af37;
 }
 
-header p {
-    margin-top: 10px;
-    color: #bfc7d5;
-    font-size: 16px;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+nav a.active {
+    color: #d4af37;
+}
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
     max-width: 1200px;
@@ -43,17 +75,9 @@ header p {
     padding: 40px 20px;
 }
 
-.back {
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.back:hover {
-    text-decoration: underline;
-}
+/* =========================
+   GRID
+========================= */
 
 .grid {
     display: grid;
@@ -62,6 +86,9 @@ header p {
 }
 
 .card {
+    display: block;
+    text-decoration: none;
+    color: white;
     background: linear-gradient(145deg, #0d1b36, #071022);
     border: 1px solid #243657;
     border-radius: 14px;
@@ -97,6 +124,10 @@ header p {
     font-weight: bold;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -104,19 +135,60 @@ footer {
     border-top: 1px solid #1d2b45;
     margin-top: 40px;
 }
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px 20px 0;
+    }
+
+    .header-top {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>SUPER BOWLS</h1>
-    <p>The complete history of the biggest game in American football</p>
+
+    <div class="header-top">
+
+        <h1>SUPER BOWLS</h1>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="super-bowls.html" class="active">SUPER BOWLS</a>
+            <a href="teams.html">TEAMS</a>
+            <a href="mvp.html">MVP</a>
+        </nav>
+
+    </div>
+
 </header>
 
 <div class="container">
-
-<a class="back" href="index.html">← BACK TO HOME</a>
 
 <div class="grid">
 
@@ -205,3 +277,4 @@ superBowls.forEach((sb, index) => {
 
 </body>
 </html>
+```

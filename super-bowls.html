@@ -90,6 +90,7 @@
         border: 1px solid #243657;
         border-radius: 14px;
         padding: 25px;
+        text-align: center;
         transition: transform 0.2s, border-color 0.2s;
     }
 
@@ -98,26 +99,25 @@
         border-color: #d4af37;
     }
 
+    .logo {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
     .number {
         color: #d4af37;
         font-size: 18px;
         font-weight: bold;
         letter-spacing: 2px;
-    }
-
-    .card h2 {
-        margin: 10px 0;
-        font-size: 25px;
-    }
-
-    .card p {
-        color: #aeb8c9;
-        line-height: 1.5;
-        margin: 6px 0;
+        margin-bottom: 10px;
     }
 
     .year {
-        color: white !important;
+        color: white;
+        font-size: 25px;
         font-weight: bold;
     }
 
@@ -154,7 +154,7 @@
 
 <nav>
     <a href="index.html">HOME</a>
-    <a href="superbowls.html" class="active">SUPER BOWLS</a>
+    <a href="super-bowls.html" class="active">SUPER BOWLS</a>
     <a href="teams.html">TEAMS</a>
     <a href="mvp.html">MVP</a>
 </nav>
@@ -165,7 +165,7 @@
 
 <div class="eyebrow">SUPER BOWL LEGACY</div>
 
-<h1>SUPER <span> BOWLS</span></h1>
+<h1>SUPER <span>BOWLS</span></h1>
 
 </section>
 
@@ -243,21 +243,19 @@ superBowls.forEach((sb, index) => {
     document.write(`
         <a class="card" href="superbowl.html?id=${index + 1}">
 
+            <img 
+                class="logo"
+                src="superbowl-images/${sb[0]}.png"
+                alt="Super Bowl ${sb[0]}"
+            >
+
             <div class="number">
                 SUPER BOWL ${sb[0]}
             </div>
 
-            <h2>
+            <div class="year">
                 ${sb[1]}
-            </h2>
-
-            <p class="year">
-                Champion: ${sb[2]}
-            </p>
-
-            <p>
-                Opponent: ${sb[3]}
-            </p>
+            </div>
 
         </a>
     `);
@@ -276,5 +274,3 @@ superBowls.forEach((sb, index) => {
 
 </body>
 </html>
-```
-

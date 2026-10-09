@@ -1,1 +1,562 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Super Bowl XXI | SUPER BOWL LEGACY</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b16;
+    color: #ffffff;
+}
+
+/* HEADER */
+
+header {
+    background: #071225;
+    border-bottom: 2px solid #c9a227;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-title {
+    color: #d4af37;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+    color: #d4af37;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 1150px;
+    width: 92%;
+    margin: 30px auto 50px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 270px;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background:
+        radial-gradient(ellipse at 80% 50%,
+        #263c68 0%, #0b1a33 45%, #050b16 100%);
+    box-shadow: 0 0 20px #d4af3720;
+}
+
+.eyebrow {
+    color: #d4af37;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 9vw, 100px);
+    color: #e8c65c;
+    margin: 12px 0;
+}
+
+.hero p {
+    color: #e0e5ef;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.hero-art {
+    text-align: center;
+    min-width: 180px;
+}
+
+.hero-art img {
+    width: 230px;
+    max-width: 100%;
+    height: 170px;
+    object-fit: contain;
+}
+
+.hero-art span {
+    display: block;
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* TEAM INFORMATION */
+
+.team-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.team-info-card {
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 155px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.broncos {
+    background: linear-gradient(135deg, #8d3c13, #f47920, #47200f);
+}
+
+.giants {
+    background: linear-gradient(135deg, #071a39, #174b94, #071225);
+}
+
+.team-info-card img {
+    width: 95px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.team-info-card h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.team-info-card p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* FINAL SCORE */
+
+.score-card {
+    margin-top: 22px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 100px;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 25px;
+}
+
+.score-row img {
+    width: 75px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.score-row h2 {
+    font-size: clamp(17px, 3vw, 30px);
+    font-style: italic;
+}
+
+.score-row strong {
+    font-size: 48px;
+    text-align: center;
+}
+
+.score-broncos {
+    background: linear-gradient(90deg, #f47920, #a84b18);
+    color: #071225;
+}
+
+.score-giants {
+    background: linear-gradient(90deg, #102c60, #071225);
+}
+
+/* SECTION TITLES */
+
+.section-title {
+    color: #d4af37;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 32px 0 15px;
+    letter-spacing: 1px;
+}
+
+/* QUARTER TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    min-width: 480px;
+}
+
+thead {
+    background: #173c7b;
+}
+
+th {
+    padding: 15px 10px;
+    color: #f4d46b;
+    font-size: 14px;
+}
+
+td {
+    padding: 15px 10px;
+    border-top: 1px solid #274b79;
+    background: #0b1930;
+    font-size: 15px;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+.final-score {
+    color: #f4d46b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* HIGHLIGHTS */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.highlight-card {
+    min-height: 175px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 22px 15px;
+    text-align: center;
+    background: linear-gradient(145deg, #142b4c, #071225);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.highlight-card h3 {
+    color: #f4d46b;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.highlight-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.highlight-card .symbol {
+    font-size: 28px;
+    color: #d4af37;
+}
+
+.mvp-card {
+    background: linear-gradient(145deg, #183d78, #071225);
+}
+
+.halftime-card {
+    background: linear-gradient(145deg, #831e28, #310b16);
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #c9a227;
+    text-align: center;
+    padding: 25px 15px;
+    color: #aeb8c9;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 18px;
+    }
+
+    .hero {
+        padding: 22px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-art img {
+        height: 120px;
+    }
+
+    .team-info {
+        grid-template-columns: 1fr;
+    }
+
+    .team-info-card img {
+        width: 75px;
+    }
+
+    .score-row {
+        grid-template-columns: 55px 1fr 55px;
+        padding: 13px 10px;
+        gap: 8px;
+    }
+
+    .score-row img {
+        width: 50px;
+        height: 45px;
+    }
+
+    .score-row strong {
+        font-size: 32px;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+        min-height: 130px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-title">SUPER BOWL LEGACY</div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="superbowls.html" class="active">SUPER BOWLS</a>
+        <a href="teams.html">TEAMS</a>
+        <a href="mvp.html">MVP</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- SUPER BOWL INFORMATION -->
+
+    <section class="hero">
+        <div>
+            <p class="eyebrow">SUPER BOWL</p>
+            <h1>XXI</h1>
+            <p>
+                <strong>Stadium:</strong> Rose Bowl<br>
+                <strong>Location:</strong> Pasadena, California<br>
+                <strong>Date:</strong> January 25, 1987
+            </p>
+        </div>
+
+        <div class="hero-art">
+            <img
+                src="Logos/super-bowl-xxi.png"
+                alt="Super Bowl XXI logo"
+                onerror="this.style.display='none'"
+            >
+            <span>SUPER BOWL XXI</span>
+        </div>
+    </section>
+
+    <!-- TEAM DETAILS -->
+
+    <section class="team-info">
+
+        <article class="team-info-card broncos">
+            <img
+                src="Logos/broncos.png"
+                alt="Denver Broncos logo"
+                onerror="this.style.display='none'"
+            >
+
+            <div>
+                <h2>DENVER BRONCOS</h2>
+                <p>
+                    <strong>AFC #2</strong><br>
+                    Regular season: 11–5<br>
+                    Coach: Dan Reeves
+                </p>
+            </div>
+        </article>
+
+        <article class="team-info-card giants">
+            <img
+                src="Logos/giants.png"
+                alt="New York Giants logo"
+                onerror="this.style.display='none'"
+            >
+
+            <div>
+                <h2>NEW YORK GIANTS</h2>
+                <p>
+                    <strong>NFC #1</strong><br>
+                    Regular season: 14–2<br>
+                    Coach: Bill Parcells
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- FINAL SCORE -->
+
+    <section class="score-card">
+
+        <div class="score-row score-broncos">
+            <img src="Logos/broncos.png" alt="Broncos"
+                 onerror="this.style.display='none'">
+            <h2>DENVER BRONCOS</h2>
+            <strong>20</strong>
+        </div>
+
+        <div class="score-row score-giants">
+            <img src="Logos/giants.png" alt="Giants"
+                 onerror="this.style.display='none'">
+            <h2>NEW YORK GIANTS</h2>
+            <strong>39</strong>
+        </div>
+
+    </section>
+
+    <!-- QUARTER-BY-QUARTER SCORE -->
+
+    <h2 class="section-title">GAME SCORE</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>TEAM</th>
+                    <th>1Q</th>
+                    <th>2Q</th>
+                    <th>3Q</th>
+                    <th>4Q</th>
+                    <th>OT</th>
+                    <th>FINAL</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>DEN</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>–</td>
+                    <td class="final-score">20</td>
+                </tr>
+
+                <tr>
+                    <td>NYG</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>17</td>
+                    <td>13</td>
+                    <td>–</td>
+                    <td class="final-score">39</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- GAME HIGHLIGHTS -->
+
+    <h2 class="section-title">GAME HIGHLIGHTS</h2>
+
+    <section class="highlights">
+
+        <article class="highlight-card">
+            <h3>NATIONAL ANTHEM</h3>
+            <p>NEIL DIAMOND</p>
+            <span class="symbol">♪</span>
+        </article>
+
+        <article class="highlight-card mvp-card">
+            <h3>MOST VALUABLE PLAYER</h3>
+            <p>PHIL SIMMS</p>
+            <p>Quarterback · New York Giants</p>
+            <span class="symbol">MVP</span>
+        </article>
+
+        <article class="highlight-card halftime-card">
+            <h3>HALFTIME SHOW</h3>
+            <p>GEORGE BURNS</p>
+            <p>USC MARCHING BAND</p>
+            <span class="symbol">♫</span>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+    SUPER BOWL LEGACY · THE HISTORY OF THE SUPER BOWL
+</footer>
+
+</body>
+</html>

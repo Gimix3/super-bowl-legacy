@@ -21,8 +21,8 @@
         color: white;
     }
 
-    header {
-    background: #071225;
+   header {
+    background: #050b16;
     border-bottom: 2px solid #c9a227;
     padding: 22px 5%;
     display: flex;
@@ -32,21 +32,25 @@
     flex-wrap: wrap;
 }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 25px;
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
 
-    nav a:hover {
-        color: #d4af37;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-    nav a.active {
-        color: #d4af37;
-    }
+nav a.active,
+nav a:hover {
+    color: #d4af37;
+}
 
     .hero {
         text-align: center;

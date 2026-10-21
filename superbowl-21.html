@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Super Bowl XXI | SUPER BOWL LEGACY</title>
 
 <style>
@@ -16,14 +14,12 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #050b16;
+    background: #000000;
     color: #ffffff;
 }
 
-/* HEADER */
-
 header {
-    background: #071225;
+    background: #000000;
     border-bottom: 2px solid #c9a227;
     padding: 22px 5%;
     display: flex;
@@ -32,7 +28,7 @@ header {
     gap: 20px;
     flex-wrap: wrap;
 }
-    
+
 .logo-title {
     color: #d4af37;
     font-family: Georgia, serif;
@@ -60,15 +56,11 @@ nav a:hover {
     color: #d4af37;
 }
 
-/* MAIN */
-
 .container {
     max-width: 1150px;
     width: 92%;
     margin: 30px auto 50px;
 }
-
-/* HERO */
 
 .hero {
     min-height: 270px;
@@ -79,9 +71,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-    background:
-        radial-gradient(ellipse at 80% 50%,
-        #263c68 0%, #0b1a33 45%, #050b16 100%);
+    background: #000000;
     box-shadow: 0 0 20px #d4af3720;
 }
 
@@ -124,8 +114,6 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* TEAM INFORMATION */
-
 .team-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -134,6 +122,7 @@ nav a:hover {
 }
 
 .team-info-card {
+    background: #000000;
     border: 2px solid #d4af37;
     border-radius: 10px;
     padding: 20px;
@@ -141,14 +130,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 18px;
-}
-
-.broncos {
-    background: linear-gradient(135deg, #8d3c13, #f47920, #47200f);
-}
-
-.giants {
-    background: linear-gradient(135deg, #071a39, #174b94, #071225);
 }
 
 .team-info-card img {
@@ -167,8 +148,6 @@ nav a:hover {
     line-height: 1.8;
 }
 
-/* FINAL SCORE */
-
 .score-card {
     margin-top: 22px;
     border: 2px solid #d4af37;
@@ -182,6 +161,8 @@ nav a:hover {
     align-items: center;
     gap: 15px;
     padding: 18px 25px;
+    background: #000000;
+    color: #ffffff;
 }
 
 .score-row img {
@@ -198,18 +179,8 @@ nav a:hover {
 .score-row strong {
     font-size: 48px;
     text-align: center;
+    color: #e8c65c;
 }
-
-.score-broncos {
-    background: linear-gradient(90deg, #f47920, #a84b18);
-    color: #071225;
-}
-
-.score-giants {
-    background: linear-gradient(90deg, #102c60, #071225);
-}
-
-/* SECTION TITLES */
 
 .section-title {
     color: #d4af37;
@@ -218,8 +189,6 @@ nav a:hover {
     margin: 32px 0 15px;
     letter-spacing: 1px;
 }
-
-/* QUARTER TABLE */
 
 .table-wrapper {
     overflow-x: auto;
@@ -232,10 +201,11 @@ table {
     border-collapse: collapse;
     text-align: center;
     min-width: 480px;
+    background: #000000;
 }
 
 thead {
-    background: #173c7b;
+    background: #000000;
 }
 
 th {
@@ -246,8 +216,9 @@ th {
 
 td {
     padding: 15px 10px;
-    border-top: 1px solid #274b79;
-    background: #0b1930;
+    border-top: 1px solid #c9a227;
+    background: #000000;
+    color: #ffffff;
     font-size: 15px;
 }
 
@@ -260,8 +231,6 @@ td:first-child {
     font-size: 20px;
     font-weight: bold;
 }
-
-/* HIGHLIGHTS */
 
 .highlights {
     display: grid;
@@ -276,7 +245,7 @@ td:first-child {
     border-radius: 10px;
     padding: 22px 15px;
     text-align: center;
-    background: linear-gradient(145deg, #142b4c, #071225);
+    background: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,17 +270,13 @@ td:first-child {
     color: #d4af37;
 }
 
-.mvp-card {
-    background: linear-gradient(145deg, #183d78, #071225);
-}
-
+.mvp-card,
 .halftime-card {
-    background: linear-gradient(145deg, #831e28, #310b16);
+    background: #000000;
 }
-
-/* FOOTER */
 
 footer {
+    background: #000000;
     border-top: 1px solid #c9a227;
     text-align: center;
     padding: 25px 15px;
@@ -319,8 +284,6 @@ footer {
     font-size: 12px;
     letter-spacing: 2px;
 }
-
-/* MOBILE */
 
 @media (max-width: 650px) {
     header {
@@ -389,7 +352,7 @@ footer {
 <body>
 
 <header>
-       <nav>
+    <nav>
         <a href="index.html">HOME</a>
         <a href="superbowls.html" class="active">SUPER BOWLS</a>
         <a href="teams.html">TEAMS</a>
@@ -398,8 +361,6 @@ footer {
 </header>
 
 <main class="container">
-
-    <!-- SUPER BOWL INFORMATION -->
 
     <section class="hero">
         <div>
@@ -422,17 +383,14 @@ footer {
         </div>
     </section>
 
-    <!-- TEAM DETAILS -->
-
     <section class="team-info">
 
-        <article class="team-info-card broncos">
+        <article class="team-info-card">
             <img
                 src="Logos/broncos.png"
                 alt="Denver Broncos logo"
                 onerror="this.style.display='none'"
             >
-
             <div>
                 <h2>DENVER BRONCOS</h2>
                 <p>
@@ -443,13 +401,12 @@ footer {
             </div>
         </article>
 
-        <article class="team-info-card giants">
+        <article class="team-info-card">
             <img
                 src="Logos/giants.png"
                 alt="New York Giants logo"
                 onerror="this.style.display='none'"
             >
-
             <div>
                 <h2>NEW YORK GIANTS</h2>
                 <p>
@@ -462,18 +419,16 @@ footer {
 
     </section>
 
-    <!-- FINAL SCORE -->
-
     <section class="score-card">
 
-        <div class="score-row score-broncos">
+        <div class="score-row">
             <img src="Logos/broncos.png" alt="Broncos"
                  onerror="this.style.display='none'">
             <h2>DENVER BRONCOS</h2>
             <strong>20</strong>
         </div>
 
-        <div class="score-row score-giants">
+        <div class="score-row">
             <img src="Logos/giants.png" alt="Giants"
                  onerror="this.style.display='none'">
             <h2>NEW YORK GIANTS</h2>
@@ -481,8 +436,6 @@ footer {
         </div>
 
     </section>
-
-    <!-- QUARTER-BY-QUARTER SCORE -->
 
     <h2 class="section-title">GAME SCORE</h2>
 
@@ -524,8 +477,6 @@ footer {
         </table>
     </div>
 
-    <!-- GAME HIGHLIGHTS -->
-
     <h2 class="section-title">GAME HIGHLIGHTS</h2>
 
     <section class="highlights">
@@ -536,14 +487,14 @@ footer {
             <span class="symbol">♪</span>
         </article>
 
-        <article class="highlight-card mvp-card">
+        <article class="highlight-card">
             <h3>MOST VALUABLE PLAYER</h3>
             <p>PHIL SIMMS</p>
             <p>Quarterback · New York Giants</p>
             <span class="symbol">MVP</span>
         </article>
 
-        <article class="highlight-card halftime-card">
+        <article class="highlight-card">
             <h3>HALFTIME SHOW</h3>
             <p>GEORGE BURNS</p>
             <p>USC MARCHING BAND</p>

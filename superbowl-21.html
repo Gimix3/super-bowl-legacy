@@ -29,13 +29,6 @@ header {
     flex-wrap: wrap;
 }
 
-.logo-title {
-    color: #d4af37;
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: bold;
-}
-
 nav {
     display: flex;
     justify-content: flex-end;
@@ -56,17 +49,19 @@ nav a:hover {
     color: #d4af37;
 }
 
+/* FITXA MÉS ESTRETA */
 .container {
-    max-width: 1150px;
+    max-width: 900px;
     width: 92%;
     margin: 30px auto 50px;
 }
 
+/* FILA 1: TÍTOL, LOGO, ESTADI, UBICACIÓ I DATA */
 .hero {
-    min-height: 270px;
+    min-height: 250px;
     border: 2px solid #d4af37;
     border-radius: 12px;
-    padding: 35px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,7 +79,7 @@ nav a:hover {
 
 .hero h1 {
     font-family: Georgia, serif;
-    font-size: clamp(55px, 9vw, 100px);
+    font-size: clamp(55px, 9vw, 90px);
     color: #e8c65c;
     margin: 12px 0;
 }
@@ -97,23 +92,48 @@ nav a:hover {
 
 .hero-art {
     text-align: center;
-    min-width: 180px;
+    min-width: 150px;
 }
 
 .hero-art img {
-    width: 230px;
+    width: 200px;
     max-width: 100%;
-    height: 170px;
+    height: 160px;
     object-fit: contain;
 }
 
-.hero-art span {
-    display: block;
-    color: #d4af37;
-    font-size: 20px;
-    font-weight: bold;
+/* FILA 2: MARCADOR FINAL GRAN I PROTAGONISTA */
+.score-card {
+    margin-top: 22px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000000;
 }
 
+.score-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.score-row strong {
+    font-size: clamp(60px, 8vw, 90px);
+    line-height: 1;
+    color: #e8c65c;
+    font-family: Georgia, serif;
+}
+
+.score-dash {
+    color: #d4af37;
+    font-size: clamp(45px, 6vw, 65px);
+    line-height: 1;
+}
+
+/* FILA 3: EQUIPS, EN UNA SECCIÓ SEPARADA */
 .team-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -133,14 +153,16 @@ nav a:hover {
 }
 
 .team-info-card img {
-    width: 95px;
-    height: 85px;
+    width: 85px;
+    height: 80px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .team-info-card h2 {
-    font-size: 19px;
+    font-size: 17px;
     margin-bottom: 10px;
+    color: #f4d46b;
 }
 
 .team-info-card p {
@@ -148,44 +170,7 @@ nav a:hover {
     line-height: 1.8;
 }
 
-.score-card {
-    margin-top: 22px;
-    border: 2px solid #d4af37;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.score-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: 15px;
-    padding: 35px 25px;
-    background: #000000;
-    color: #d4af37;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.score-row img {
-    width: 75px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.score-row h2 {
-    font-size: clamp(17px, 3vw, 30px);
-    font-style: italic;
-}
-
-.score-row strong {
-    font-size: 48px;
-    text-align: center;
-    color: #e8c65c;
-}
-
+/* TÍTOLS DE LES SECCIONS */
 .section-title {
     color: #d4af37;
     font-family: Georgia, serif;
@@ -194,6 +179,7 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+/* MARCADOR PER QUARTS */
 .table-wrapper {
     overflow-x: auto;
     border: 2px solid #d4af37;
@@ -236,6 +222,7 @@ td:first-child {
     font-weight: bold;
 }
 
+/* GAME HIGHLIGHTS */
 .highlights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -259,12 +246,12 @@ td:first-child {
 
 .highlight-card h3 {
     color: #f4d46b;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 1px;
 }
 
 .highlight-card p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     font-weight: bold;
 }
@@ -272,11 +259,6 @@ td:first-child {
 .highlight-card .symbol {
     font-size: 28px;
     color: #d4af37;
-}
-
-.mvp-card,
-.halftime-card {
-    background: #000000;
 }
 
 footer {
@@ -289,14 +271,11 @@ footer {
     letter-spacing: 2px;
 }
 
+/* ADAPTACIÓ A MÒBILS */
 @media (max-width: 650px) {
     header {
         justify-content: center;
         text-align: center;
-    }
-
-    .logo-title {
-        font-size: 24px;
     }
 
     nav {
@@ -323,23 +302,27 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .team-info-card {
+        padding: 15px;
+        gap: 12px;
+    }
+
     .team-info-card img {
-        width: 75px;
+        width: 70px;
+        height: 70px;
     }
 
     .score-row {
-        grid-template-columns: 55px 1fr 55px;
-        padding: 13px 10px;
-        gap: 8px;
-    }
-
-    .score-row img {
-        width: 50px;
-        height: 45px;
+        padding: 22px 12px;
+        gap: 15px;
     }
 
     .score-row strong {
-        font-size: 32px;
+        font-size: 52px;
+    }
+
+    .score-dash {
+        font-size: 38px;
     }
 
     .highlights {
@@ -366,6 +349,7 @@ footer {
 
 <main class="container">
 
+    <!-- FILA 1: INFORMACIÓ DEL SUPER BOWL -->
     <section class="hero">
         <div>
             <p class="eyebrow">SUPER BOWL</p>
@@ -378,32 +362,25 @@ footer {
         </div>
 
         <div class="hero-art">
-    <img
-        src="Superbowls/XXI.png"
-        alt="Logotip oficial del Super Bowl XXI"
-        onerror="this.style.display='none'"
-    >
-</div>
+            <img
+                src="Superbowls/XXI.png"
+                alt="Logotip oficial del Super Bowl XXI"
+                onerror="this.style.display='none'"
+            >
         </div>
     </section>
 
-<section class="score-card">
-
-        <div class="score-row">
-            <img src="Logos/broncos.png" alt="Broncos"
-                 onerror="this.style.display='none'">
-            <h2>DENVER BRONCOS</h2>
+    <!-- FILA 2: MARCADOR FINAL -->
+    <section class="score-card">
+        <div class="score-row"
+             aria-label="Final score: Denver Broncos 20, New York Giants 39">
             <strong>20</strong>
-        </div>
-
-        <div class="score-row">
-            <img src="Logos/giants.png" alt="Giants"
-                 onerror="this.style.display='none'">
-            <h2>NEW YORK GIANTS</h2>
+            <span class="score-dash">–</span>
             <strong>39</strong>
         </div>
+    </section>
 
-    
+    <!-- FILA 3: EQUIPS, SEPARATS DEL MARCADOR -->
     <section class="team-info">
 
         <article class="team-info-card">
@@ -440,9 +417,7 @@ footer {
 
     </section>
 
-    
-    </section>
-
+    <!-- MARCADOR PER QUARTS -->
     <h2 class="section-title">GAME SCORE</h2>
 
     <div class="table-wrapper">
@@ -483,6 +458,7 @@ footer {
         </table>
     </div>
 
+    <!-- GAME HIGHLIGHTS -->
     <h2 class="section-title">GAME HIGHLIGHTS</h2>
 
     <section class="highlights">

@@ -56,53 +56,70 @@ nav a:hover {
     margin: 30px auto 50px;
 }
 
-/* FILA 1: TÍTOL, LOGO, ESTADI, UBICACIÓ I DATA */
+/* FILA 1: TÍTOL A L'ESQUERRA, LOGO GRAN A LA DRETA */
 .hero {
-    min-height: 250px;
     border: 2px solid #d4af37;
     border-radius: 12px;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    padding: 28px 30px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-rows: auto auto;
     align-items: center;
-    gap: 25px;
+    column-gap: 24px;
+    row-gap: 12px;
     background: #000000;
     box-shadow: 0 0 20px #d4af3720;
 }
 
-.eyebrow {
-    color: #d4af37;
-    letter-spacing: 5px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
 .hero h1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    text-align: left;
     font-family: Georgia, serif;
-    font-size: clamp(55px, 9vw, 90px);
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
     color: #e8c65c;
-    margin: 12px 0;
-}
-
-.hero p {
-    color: #e0e5ef;
-    line-height: 1.8;
-    font-size: 15px;
+    margin: 0;
 }
 
 .hero-art {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    height: 100%;
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    min-width: 150px;
 }
 
 .hero-art img {
-    width: 200px;
+    display: block;
+    width: 270px;
     max-width: 100%;
-    height: 160px;
+    height: 220px;
     object-fit: contain;
+    margin: 0 auto;
 }
 
-/* FILA 2: MARCADOR FINAL GRAN I PROTAGONISTA */
+.hero-details {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    color: #e0e5ef;
+    line-height: 1.9;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 2px;
+}
+
+.hero-details strong {
+    color: #f4d46b;
+}
+
+/* FILA 2: MARCADOR FINAL */
 .score-card {
     margin-top: 22px;
     border: 2px solid #d4af37;
@@ -133,7 +150,7 @@ nav a:hover {
     line-height: 1;
 }
 
-/* FILA 3: EQUIPS, EN UNA SECCIÓ SEPARADA */
+/* FILA 3: EQUIPS */
 .team-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -289,13 +306,28 @@ footer {
     }
 
     .hero {
-        padding: 22px;
-        flex-direction: column;
-        text-align: center;
+        padding: 20px 18px;
+        grid-template-columns: minmax(0, 1fr) 125px;
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+
+    .hero-art {
+        min-height: 150px;
     }
 
     .hero-art img {
-        height: 120px;
+        width: 140px;
+        height: 150px;
+    }
+
+    .hero-details {
+        font-size: 13px;
+        line-height: 1.8;
     }
 
     .team-info {
@@ -349,21 +381,24 @@ footer {
 
 <main class="container">
 
-    <!-- FILA 1: INFORMACIÓ DEL SUPER BOWL -->
-    <div class="superbowl-header">
-    <h1>SUPER BOWL XXI</h1>
+    <!-- FILA 1: TÍTOL A L'ESQUERRA, LOGO A LA DRETA I DADES A SOTA -->
+    <section class="hero">
 
-    <img src="Superbowls/XXI.png"
-         alt="Super Bowl XXI Logo"
-         class="superbowl-logo">
-</div>
-                <strong>Stadium:</strong> Rose Bowl<br>
-                <strong>Location:</strong> Pasadena, California<br>
-                <strong>Date:</strong> January 25, 1987
-            </p>
+        <h1>SUPER BOWL XXI</h1>
+
+        <div class="hero-art">
+            <img src="Superbowls/XXI.png"
+                 alt="Super Bowl XXI Logo"
+                 onerror="this.style.display='none'">
         </div>
-      
-       </section>
+
+        <div class="hero-details">
+            <strong>Stadium:</strong> Rose Bowl<br>
+            <strong>Location:</strong> Pasadena, California<br>
+            <strong>Date:</strong> January 25, 1987
+        </div>
+
+    </section>
 
     <!-- FILA 2: MARCADOR FINAL -->
     <section class="score-card">

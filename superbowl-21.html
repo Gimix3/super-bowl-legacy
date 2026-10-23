@@ -161,12 +161,20 @@ nav a:hover {
 }
 
 .score-team-points {
-    color: #e8c65c;
-    font-family: Georgia, serif;
-    font-size: clamp(48px, 6vw, 68px);
+    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(22px, 3vw, 30px);
     font-weight: bold;
     line-height: 1;
     text-align: right;
+}
+
+.score-team-row:first-child .score-team-points {
+    color: #FB4F14;
+}
+
+.score-team-row:nth-child(2) .score-team-points {
+    color: #4A78B8;
 }
 
 /* FILA 3: FITXES DELS EQUIPS */

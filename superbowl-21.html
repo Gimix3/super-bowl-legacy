@@ -291,16 +291,20 @@ td:first-child {
     gap: 12px;
 }
 
-.highlight-card h3 {
-    color: #f4d46b;
-    font-size: 16px;
-    letter-spacing: 1px;
-    width: 100%;
+/* ALINEAR ELS TRES TÍTOLS DE LA FILA INFERIOR */
+.highlights .highlight-card {
+    justify-content: flex-start;
+    padding-top: 14px;
+}
+
+.highlights .highlight-card h3 {
     height: 20px;
+    min-height: 20px;
     line-height: 20px;
-    text-align: center;
     margin: 0;
-    flex-shrink: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
 }
       
 .anthem-card {

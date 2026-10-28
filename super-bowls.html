@@ -317,7 +317,13 @@ superBowls.forEach((sb, index) => {
 
 
     document.write(`
-        <a class="card" href="${index + 1 === 21 ? 'Fitxes/superbowl-21.html' : 'Fitxes/superbowl.html?id=' + (index + 1)}">
+        <a class="card" href="${
+    index + 1 === 1
+        ? 'Fitxes/superbowl-1.html'
+        : index + 1 === 21
+            ? 'Fitxes/superbowl-21.html'
+            : 'Fitxes/superbowl.html?id=' + (index + 1)
+}">
             <img 
     class="logo logo-${index + 1}"
     src="Superbowls/${sb[0]}.png"

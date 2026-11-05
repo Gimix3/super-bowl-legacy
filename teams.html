@@ -211,23 +211,153 @@ nav a:hover {
     letter-spacing: 1.5px;
 }
     
-    @media (max-width: 900px) {
+ 
+/* =====================================
+   MOBILE VERSION - SUPER BOWL TEAMS
+===================================== */
 
-        header {
-            flex-direction: column;
-            gap: 20px;
-        }
+@media (max-width: 900px) {
 
-        .teams-grid {
-            margin-left: 0;
-        }
-
-        .team-card {
-            width: 100%;
-            max-width: 900px;
-        }
-
+    header {
+        padding: 18px 12px;
+        justify-content: center;
     }
+
+    nav {
+        justify-content: center;
+        margin: 0;
+        gap: 18px;
+    }
+
+    .teams-grid {
+        margin-left: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section {
+        padding: 30px 12px 60px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 600px;
+        height: 135px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .team-card img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .team-info {
+        min-width: 0;
+    }
+
+    .team-card h2 {
+        font-size: 23px;
+        letter-spacing: 0;
+        line-height: 1.05;
+    }
+
+    .team-stats {
+        min-width: 90px;
+        gap: 5px;
+    }
+
+    .team-stats .trophy {
+        width: 38px;
+        height: 55px;
+    }
+
+    .team-stats .number {
+        font-size: 48px;
+    }
+
+    .team-card .appearances {
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 65px 12px 45px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        font-size: clamp(38px, 9vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    footer {
+        padding: 30px 15px;
+        font-size: 11px;
+    }
+}
+
+/* MOBILE PETIT */
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .team-card {
+        height: 120px;
+        padding: 9px;
+        gap: 8px;
+    }
+
+    .team-card img {
+        width: 58px;
+        height: 65px;
+    }
+
+    .team-card h2 {
+        font-size: 17px;
+        letter-spacing: 0;
+    }
+
+    .team-stats {
+        min-width: 72px;
+        gap: 3px;
+    }
+
+    .team-stats .trophy {
+        width: 30px;
+        height: 45px;
+    }
+
+    .team-stats .number {
+        font-size: 38px;
+    }
+
+    .team-card .appearances {
+        font-size: 9px;
+        bottom: 4px;
+        letter-spacing: 0.7px;
+    }
+
+    .hero {
+        padding: 50px 8px 35px;
+    }
+}
+
 
     /* PATRIOTS - mateix estil que totes les altres fitxes */
 

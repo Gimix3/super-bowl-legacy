@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,6 +142,11 @@ nav a:hover {
     padding: 0 6px;
 }
 
+/* BAIXAR LA FILA DELS RAIDERS 20 PIXELS */
+.score-team-row:nth-child(2) {
+    transform: translateY(20px);
+}
+
 .score-team-logo {
     width: 76px;
     height: 76px;
@@ -150,13 +156,13 @@ nav a:hover {
     transform: translateX(30px);
 }
 
-/* LOGO RAIDERS UNA MICA MÉS PETIT */ 
+/* LOGO RAIDERS UNA MICA MÉS PETIT */
 .score-team-row:nth-child(2) .score-team-logo {
     width: 58px;
     height: 58px;
 }
 
-/* NOUVA TIPOGRAFIA ESPORTIVA DEL MARCADOR */
+/* TIPOGRAFIA ESPORTIVA DEL MARCADOR */
 .score-team-name {
     color: #65B879;
     font-family: "Arial Black", Arial, Helvetica, sans-serif;
@@ -217,7 +223,7 @@ nav a:hover {
     flex-shrink: 0;
 }
 
-/* COLORS DELS EQUIPS A LA TERCERA FILA */
+/* COLORS DELS EQUIPS */
 .team-info-card:first-child h2 {
     color: #65B879;
 }
@@ -308,7 +314,7 @@ td:first-child {
     gap: 12px;
 }
 
-/* ALINEAR ELS TRES TÍTOLS DE LA FILA INFERIOR */
+/* ALINEAR ELS TRES TÍTOLS */
 .highlights .highlight-card {
     justify-content: flex-start;
     padding-top: 14px;
@@ -461,6 +467,11 @@ td:first-child {
         padding: 10px 2px;
     }
 
+    /* AL MÒBIL LES FILES JA TENEN PROU SEPARACIÓ */
+    .score-team-row:nth-child(2) {
+        transform: none;
+    }
+
     .score-team-logo {
         width: 54px;
         height: 54px;
@@ -536,7 +547,7 @@ tbody tr:last-child td:first-child {
         </div>
     </section>
 
-    <!-- FILA 2: EQUIPS I MARCADORS, UN A SOBRE L'ALTRE -->
+    <!-- FILA 2: EQUIPS I MARCADORS -->
     <section class="score-card"
              aria-label="Final score: Green Bay Packers 33, Oakland Raiders 14">
 
@@ -564,7 +575,7 @@ tbody tr:last-child td:first-child {
 
     </section>
 
-    <!-- FILA 3: FITXES DELS EQUIPS, SENSE LOGOS -->
+    <!-- FILA 3: FITXES DELS EQUIPS -->
     <section class="team-info">
 
         <article class="team-info-card">

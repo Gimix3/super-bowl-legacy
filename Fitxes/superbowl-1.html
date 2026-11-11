@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,37 @@
 <title>Super Bowl I | SUPER BOWL LEGACY</title>
 
 <style>
+
+/* NAVEGACIÓ ENTRE FITXES */
+.fitxa-navigation {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.fitxa-navigation a {
+    color: #d4af37;
+    text-decoration: none;
+    font-family: Arial Black, Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke: 2px #d4af37;
+    pointer-events: auto;
+}
+
+.fitxa-navigation a:hover {
+    color: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -168,7 +200,6 @@ nav a:hover {
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9),
                  0 0 8px currentColor;
 }
-
 
 /* VERD GREEN BAY PACKERS */
 .score-team-row:nth-child(2) .score-team-name {
@@ -508,6 +539,11 @@ tbody tr:last-child td:first-child {
 </header>
 
 <main class="container">
+
+    <!-- FLETXA DE NAVEGACIÓ: NOMÉS ENDAVANT -->
+    <div class="fitxa-navigation">
+        <a href="superbowl-2.html" title="Super Bowl II">→</a>
+    </div>
 
     <!-- FILA 1: TÍTOL A L'ESQUERRA I LOGO A LA DRETA -->
     <section class="hero">

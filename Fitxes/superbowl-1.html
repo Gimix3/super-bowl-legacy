@@ -257,6 +257,11 @@ nav a:hover {
     flex-shrink: 0;
 }
 
+.team-info-card .coach-name {
+    color: #d4af37;
+    font-weight: bold;
+}
+    
 /* COLORS DELS EQUIPS A LA TERCERA FILA */
 .team-info-card:first-child h2 {
     color: #E31837;
@@ -271,6 +276,10 @@ nav a:hover {
     font-size: 16px;
     line-height: 1.8;
     color: #aeb8c9;
+}
+
+.team-info-card p strong {
+    color: #ffffff;
 }
 
 /* PRIMERA FILA: AFL / NFL EN BLANC */
@@ -638,7 +647,7 @@ tbody tr:last-child td:first-child {
                 <p>
                     <strong>AFL #1</strong><br>
                     Regular season: 11–2–1<br>
-                    Coach: Hank Stram
+                   Coach: <span class="coach-name">Hank Stram</span>
                 </p>
             </div>
         </article>
@@ -649,7 +658,7 @@ tbody tr:last-child td:first-child {
                 <p>
                     <strong>NFL #1</strong><br>
                     Regular season: 12–2<br>
-                    Coach: Vince Lombardi
+                   Coach: <span class="coach-name">Vince Lombardi</span>
                 </p>
             </div>
         </article>

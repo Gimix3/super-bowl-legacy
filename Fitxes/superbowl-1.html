@@ -201,8 +201,6 @@ nav a:hover {
 
 /* NOM DELS EQUIPS */
 .score-team-name {
-    color: #E31837;
-    -webkit-text-stroke: 1px #ffffff;
     font-family: "Arial Black", Arial, Helvetica, sans-serif;
     font-size: clamp(18px, 5.5vw, 36px);
     font-weight: 900;
@@ -218,18 +216,17 @@ nav a:hover {
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
 }
 
-/* KANSAS CITY CHIEFS */
+/* KANSAS CITY CHIEFS: VERMELL AMB BORDE BLANC */
 .score-team-row:first-child .score-team-name {
-    color: #28543A;
-    -webkit-text-stroke: 1px #FFB612;
-}
-
-/* GREEN BAY PACKERS */
-.score-team-row:nth-child(1) .score-team-name {
-     color: #E31837;
+    color: #E31837;
     -webkit-text-stroke: 1px #FFFFFF;
 }
 
+/* GREEN BAY PACKERS: VERD AMB BORDE GROC */
+.score-team-row:last-child .score-team-name {
+    color: #28543A;
+    -webkit-text-stroke: 1px #FFB612;
+}
 .score-team-points {
     color: #e8c65c;
     font-family: Arial, Helvetica, sans-serif;

@@ -214,9 +214,18 @@ nav a:hover {
                  0 0 8px currentColor;
 }
 
-/* COLOR OAKLAND RAIDERS */
-.score-team-row:nth-child(2) .score-team-name {
-    color: #70787B;
+/* PACKERS - CONTORN GROC */
+.score-team-row:first-child .score-team-name {
+    color: #28543A;
+    -webkit-text-stroke: 1px #FFB612;
+    paint-order: stroke fill;
+}
+
+/* RAIDERS - CONTORN BLANC */
+.score-team-row:last-child .score-team-name {
+    color: #000000;
+    -webkit-text-stroke: 1px #FFFFFF;
+    paint-order: stroke fill;
 }
 
 .score-team-points {
@@ -572,21 +581,6 @@ tbody tr:last-child td:first-child {
     transform: translateX(15px);
 }
 
-/* CONTORN DELS NOMS DEL MARCADOR */
-
-/* GREEN BAY PACKERS */
-.score-team-name.packers {
-    color: #203731;
-    -webkit-text-stroke: 1px #FFB612;
-    paint-order: stroke fill;
-}
-
-/* OAKLAND RAIDERS */
-.score-team-name.raiders {
-    color: #000000;
-    -webkit-text-stroke: 1px #FFFFFF;
-    paint-order: stroke fill;
-}
     
 </style>
 </head>

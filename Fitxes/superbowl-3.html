@@ -241,13 +241,10 @@ paint-order: stroke fill;
     width: 100%;
 }
 
-/* ALINEAR ELS DOS MARCADORS A LA DRETA */
-.score-team-points {
-    justify-self: stretch;
-    text-align: right;
-    padding-right: 0;
-    transform: none;
-    width: 100%;
+/* NOMÉS EL 7 ES DESPLAÇA PER ALINEAR-SE AMB EL 16 */
+.score-team-row:nth-child(2) .score-team-points {
+    transform: translateX(-35px);
+    margin-left: -20px;
 }
 
     

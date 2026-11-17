@@ -167,13 +167,15 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
+/* MARCADOR - MATEIX DISSENY I ALINEACIONS QUE FITXA 1 */
+
 .score-card {
     margin-top: 14px;
     border: 2px solid #d4af37;
     border-radius: 10px;
     overflow: hidden;
     background: #000000;
-    padding: 0px 16px 30px;
+    padding: 2px 16px 10px;
 }
 
 .score-team-row {
@@ -186,7 +188,7 @@ nav a:hover {
     padding: 0 6px;
 }
 
-/* LOGO DELS COLTS MÉS PETIT */
+/* LOGO COLTS: MIDA I ALTURA ESPECÍFIQUES */
 .score-team-row:nth-child(2) .score-team-logo {
     width: 48px;
     height: 48px;
@@ -200,12 +202,11 @@ nav a:hover {
     object-fit: contain;
     justify-self: center;
     margin-right: 18px;
-    transform: translateX(30px);
+    transform: translateX(40px);
 }
 
-/* TIPOGRAFIA ESPORTIVA DEL MARCADOR */
+/* NOMS DELS EQUIPS */
 .score-team-name {
-    color: #4f8f5b;
     font-family: "Arial Black", Arial, Helvetica, sans-serif;
     font-size: clamp(18px, 5.5vw, 36px);
     font-weight: 900;
@@ -218,22 +219,32 @@ nav a:hover {
     min-width: 0;
     padding-left: 50px;
     padding-right: 12px;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9),
-                 0 0 8px currentColor;
-    -webkit-text-stroke: 1px #ffffff;
-paint-order: stroke fill;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+    transform: translateX(15px);
 }
 
-/* COLOR BALTIMORE COLTS */
-.score-team-row:nth-child(2) .score-team-name {
+/* NEW YORK JETS */
+.score-team-row:first-child .score-team-name {
+    color: #4f8f5b;
+    -webkit-text-stroke: 1px #FFFFFF;
+}
+
+/* BALTIMORE COLTS */
+.score-team-row:last-child .score-team-name {
     color: #4A78B8;
+    -webkit-text-stroke: 1px #FFFFFF;
 }
 
+/* NÚMEROS - EXACTAMENT COM FITXA 1 */
 .score-team-points {
+    color: #e8c65c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(20px, 5vw, 45px);
+    font-weight: bold;
+    line-height: 1;
     text-align: right;
     padding-right: 30px;
     transform: translateX(-35px);
-    width: 100%;
 }
 
 
